@@ -1,101 +1,56 @@
 #include <msp430.h>
 
-#define CALADC12_15V_30C  *((unsigned int *)0x1A1A)   // Temperature Sensor Calibration-30 C
-                                                      //See device datasheet for TLV table memory mapping
-#define CALADC12_15V_85C  *((unsigned int *)0x1A1C)   // Temperature Sensor Calibration-85 C
-
-unsigned int temp;
-volatile float temperatureDegC;
-volatile float temperatureDegF;
-void init_UART(void);
-unsigned char INCHAR_UART(void);
-void OUTA_UART(unsigned char a);
-int main(void)
+// packed struct
+#pragma pack(push, 1)
+struct my_struct_1
 {
-  WDTCTL = WDTPW + WDTHOLD;                 // Stop WDT
-  init_UART();
+  unsigned char port1_bits;
+  unsigned int delay;
+  unsigned char port2_bits;
+};
+#pragma pack(pop)
 
-  REFCTL0 &= ~REFMSTR;                      // Reset REFMSTR to hand over control to
-                                            // ADC12_A ref control registers
-  ADC12CTL0 = ADC12SHT0_8 + ADC12REFON + ADC12ON;
-                                            // Internal ref = 1.5V
-  ADC12CTL1 = ADC12SHP;                     // enable sample timer
-  ADC12MCTL0 = ADC12SREF_1 + ADC12INCH_10;  // ADC i/p ch A10 = temp sense i/p
-  ADC12IE = 0x001;                          // ADC_IFG upon conv result-ADCMEMO
- // __delay_cycles(100);                       // delay to allow Ref to settle
-  ADC12CTL0 |= ADC12ENC;
+// normal struct
+struct my_struct_2
+{
+  unsigned char port3_bits;
+  unsigned int delay;
+  unsigned char port4_bits;
+};
+
+struct my_struct_1 my_data_1;
+struct my_struct_2 my_data_2;
+volatile unsigned int delay;
+
+void main(void)
+{
+
+  // stop WDT
+  WDTCTL = WDTPW + WDTHOLD;
+
+  // initialize structures
+  my_data_1.port1_bits = BIT0;
+  my_data_1.delay = 100;
+  my_data_1.port2_bits = BIT1;
+
+  my_data_2.port3_bits = BIT2;
+  my_data_2.delay = 200;
+  my_data_2.port4_bits = BIT3;
+
+  // initialize hardware using data structure
+  P1DIR = my_data_1.port1_bits;
+  P2DIR = my_data_1.port2_bits;
+  P3DIR = my_data_2.port3_bits;
+  P4DIR = my_data_2.port4_bits;
 
   while(1)
   {
-    ADC12CTL0 &= ~ADC12SC;
-    ADC12CTL0 |= ADC12SC;                   // Sampling and conversion start
+    P1OUT ^= my_data_1.port1_bits;
+    P2OUT ^= my_data_1.port2_bits;
+    for(delay=my_data_1.delay;delay;delay--);
 
-    __bis_SR_register(LPM4_bits + GIE);     // LPM0 with interrupts enabled
-    __no_operation();
-
-    // Temperature in Celsius. See the Device Descriptor Table section in the
-    // System Resets, Interrupts, and Operating Modes, System Control Module
-    // chapter in the device user's guide for background information on the
-    // used formula.
-    temperatureDegC = (float)(((long)temp - CALADC12_15V_30C) * (85 - 30)) /
-            (CALADC12_15V_85C - CALADC12_15V_30C) + 30.0f;
-    // Temperature in Fahrenheit Tf = (9/5)*Tc + 32
-    temperatureDegF = temperatureDegC * 9.0f / 5.0f + 32.0f;
-    OUTA_UART(temperatureDegF);
-
-    __no_operation();                       // SET BREAKPOINT HERE
+    P3OUT ^= my_data_2.port3_bits;
+    P4OUT ^= my_data_2.port4_bits;
+    for(delay=my_data_2.delay;delay;delay--);
   }
 }
-void init_UART(void) {
-        P4SEL           |=      BIT4 | BIT5;			// the control signal for the multiplexor that sets P4.4 and 4.5 to control UART
-        UCA1CTL1        |=      UCSWRST;
-        UCA1CTL1        |=      UCSSEL_2;
-
-        UCA1BR0         =       109;
-        UCA1BR1         =       0;
-        /* modulation */
-        UCA1MCTL        =       UCBRS_2 | UCBRF_0;
-        UCA1CTL1        &=      ~UCSWRST;
-}
-void OUTA_UART(unsigned char a){ //--------------------------------------------------------------- //*************************************************************** //--------------------------------------------------------------- // IFG2 register (1) = 1 transmit buffer is empty,
-
-	  while (!(UCA1IFG & UCTXIFG)) ;
-	  UCA1TXBUF = a;
-  }
-
-#pragma vector=ADC12_VECTOR
-__interrupt void ADC12ISR (void)
-{
-  switch(__even_in_range(ADC12IV,34))
-  {
-  case  0: break;                           // Vector  0:  No interrupt
-  case  2: break;                           // Vector  2:  ADC overflow
-  case  4: break;                           // Vector  4:  ADC timing overflow
-  case  6:                                  // Vector  6:  ADC12IFG0
-    temp = ADC12MEM0;                       // Move results, IFG is cleared
-    __bic_SR_register_on_exit(LPM4_bits);   // Exit active CPU
-    break;
-  case  8: break;                           // Vector  8:  ADC12IFG1
-  case 10: break;                           // Vector 10:  ADC12IFG2
-  case 12: break;                           // Vector 12:  ADC12IFG3
-  case 14: break;                           // Vector 14:  ADC12IFG4
-  case 16: break;                           // Vector 16:  ADC12IFG5
-  case 18: break;                           // Vector 18:  ADC12IFG6
-  case 20: break;                           // Vector 20:  ADC12IFG7
-  case 22: break;                           // Vector 22:  ADC12IFG8
-  case 24: break;                           // Vector 24:  ADC12IFG9
-  case 26: break;                           // Vector 26:  ADC12IFG10
-  case 28: break;                           // Vector 28:  ADC12IFG11
-  case 30: break;                           // Vector 30:  ADC12IFG12
-  case 32: break;                           // Vector 32:  ADC12IFG13
-  case 34: break;                           // Vector 34:  ADC12IFG14
-  default: break;
-  }
-
-
-
-}
-unsigned char INCHAR_UART(void){ //--------------------------------------------------------------- //*************************************************************** //--------------------------------------------------------------- // IFG2 register (0) = 1 receive buffer is full,
- 	while (!(UCA1IFG & UCRXIFG)) ;
- 	return UCA1RXBUF;
- }

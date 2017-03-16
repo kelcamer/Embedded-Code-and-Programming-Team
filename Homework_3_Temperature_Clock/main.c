@@ -5,7 +5,18 @@
 
 
 #include "msp430.h"
-#include "stdio.h"
+#include <stdio.h>
+
+struct temperature{
+	unsigned int tempInC;
+	unsigned int tempInF;
+	unsigned int hour;
+	unsigned int min;
+	unsigned int sec;
+
+
+};
+
 #define CALADC12_15V_30C  *((unsigned int *)0x1A1A)   // Temperature Sensor Calibration-30 C
                                                       //See device datasheet for TLV table memory mapping
 #define CALADC12_15V_85C  *((unsigned int *)0x1A1C)   // Temperature Sensor Calibration-85 C
@@ -14,7 +25,6 @@
 
 void init_UART(void);
 void OUTA_UART(unsigned char A);
-void init_Temps(void);
 int getTemps(void);
 void setTime(int h, int m, int s);
 void displayTime();
@@ -24,18 +34,19 @@ volatile unsigned int seconds;
 volatile unsigned int minutes;
 volatile unsigned int multiplesoffive;
 volatile unsigned int hours;
+volatile unsigned int index;
+void initializeStruct();
 unsigned int temp;
-//temperature * temps;
-int main(void){
 
-	//int x = 0;
-	//for(x = 0; x < 32; x++){
-	//	temps[x] = (temperature)malloc(sizeof(temperature));
-	//}
+struct temperature alltemps[32];
+
+int main(void){
 
 	volatile unsigned char a;
 	volatile unsigned int i;
 	volatile unsigned int currenttemp;
+		index = 0;
+		initializeStruct();
 		WDTCTL = WDTPW + WDTHOLD;
 		init_UART();
 
@@ -85,8 +96,8 @@ ADC12CTL0 |= ADC12SC;                   // Sampling and conversion start
 
 __bis_SR_register(LPM3_bits + GIE);     // LPM3 with interrupts enabled
 __no_operation();
+displayTime();
 
-getTemps();
 
 }
 
@@ -120,9 +131,7 @@ void init_UART(void) {
         UCA1MCTL        =       UCBRS_2 | UCBRF_0;
         UCA1CTL1        &=      ~UCSWRST;
 }
-void init_Temps(void){
 
-}
 int getTemps(void){
 	volatile float temperatureDegF = 0;
 		volatile float temperatureDegC = 0;
@@ -136,10 +145,22 @@ int getTemps(void){
 		            (CALADC12_15V_85C - CALADC12_15V_30C) + 30.0f;
 		    // Temperature in Fahrenheit Tf = (9/5)*Tc + 32
 		    temperatureDegF = temperatureDegC * 9.0f / 5.0f + 32.0f;
-		    OUTA_UART(temperatureDegF);
-		//    temps[index].tempInF = temperatureDegF;
-		    // temps[index].hours = hour
-		    // temps[index].min = minutes
+
+		    alltemps[index].tempInF = temperatureDegF;
+		    alltemps[index].tempInC = temperatureDegC;
+		    alltemps[index].hour = hours;
+		    alltemps[index].min = minutes;
+			alltemps[index].sec = seconds;
+
+
+
+			index++;
+
+			if(index == 32){
+				// delete the oldest entry
+				index = 31;
+			}
+
 }
 void setTime(int h, int m, int s){
 	hours = h;
@@ -154,6 +175,99 @@ void displayTime(){
 
 
 }
+
+
+void initializeStruct(){
+
+
+	int x = 0;
+		for(x = 0; x < 32; x++){
+			alltemps[x].hour = 0;
+			alltemps[x].min = 0;
+			alltemps[x].sec = 0;
+			alltemps[x].tempInC = 0;
+			alltemps[x].tempInF = 0;
+
+		}
+}
+void displayAllTemps(void){
+	int x = 0;
+	int state = 0;
+	for(x = 0; x < 32; x++){
+		// if there is a valid time, then print it
+		if(!(alltemps[x].hour == 0 && alltemps[x].min == 0 && alltemps[x].sec == 0)){
+			displayTime();
+			OUTA_UART(':');
+			OUTA_UART(0x0D);
+			OUTA_UART(0x0A);
+			OUTA_UART(alltemps[x].tempInF);
+			OUTA_UART(0x0D);
+			OUTA_UART(0x0A);
+
+			state = 1;
+		}
+
+
+	}
+
+	if(state == 0){
+			// print no recorded temps
+		}
+
+}
+void displayOldest(void){
+	int x = 31;
+	int state = 0;
+	for(x = 31; x >=0; x--){
+		if(!(alltemps[x].hour == 0 && alltemps[x].min == 0 && alltemps[x].sec == 0)){
+				displayTime();
+				OUTA_UART(':');
+				OUTA_UART(0x0D);
+				OUTA_UART(0x0A);
+				OUTA_UART(alltemps[x].tempInF);
+				OUTA_UART(0x0D);
+				OUTA_UART(0x0A);
+				state = 1;
+				break;
+			}
+
+	}
+	if(state == 0){
+		// print no recorded temps
+	}
+}
+/*void sortStruct(){
+	int x = 0;
+	int y = 0;
+
+	for(x = 0; x < 32; x++){
+		for(y = 0; y < 32; y++){
+			if(alltemps[x].hour > alltemps[y].hour){
+				struct temperature temporary = alltemps[x];
+				alltemps[x] = alltemps[y];
+				alltemps[y] = temporary;
+
+			}
+			else if(alltemps[x].hour == alltemps[y].hour){
+				if(alltemps[x].min > alltemps[y].min){
+					struct temperature temporary = alltemps[x];
+					alltemps[x] = alltemps[y];
+					alltemps[y] = temporary;
+				}
+				else if(alltemps[x].sec > alltemps[y].sec){
+					struct temperature temporary = alltemps[x];
+					alltemps[x] = alltemps[y];
+					alltemps[y] = temporary;
+				}
+
+			}
+
+		}
+
+	}
+
+
+}*/
 void useCommands(char c){
 	// tsol
 
@@ -192,18 +306,21 @@ void useCommands(char c){
 #pragma vector=TIMER0_A0_VECTOR
 __interrupt void Timer_A0 (void)
 {
+
 	/*
 	 * Ideas: Have timer interrupt once per second
 	 * once it reaches 60, increment minute counter
 	 * once minute counter = 60, increment hour counter
 	 */
 
+
+
 	seconds++;
 	if(seconds == 60){
 		minutes++;
 		multiplesoffive++;
 		seconds = 0;
-		OUTA_UART(minutes);
+
 
 	}
 	if(minutes == 60){
@@ -217,10 +334,9 @@ __interrupt void Timer_A0 (void)
 
 	}
 
-	OUTA_UART(seconds);
-
 
 	// comment this out
+
 P1OUT ^= BIT0;
 
 
@@ -277,6 +393,7 @@ __interrupt void ADC12ISR (void)
   case  6:                                  // Vector  6:  ADC12IFG0
     temp = ADC12MEM0;                       // Move results, IFG is cleared
     __bic_SR_register_on_exit(LPM3_bits);   // Exit active CPU
+
     break;
   case  8: break;                           // Vector  8:  ADC12IFG1
   case 10: break;                           // Vector 10:  ADC12IFG2
@@ -295,19 +412,6 @@ __interrupt void ADC12ISR (void)
   default: break;
   }
 }
-
-// remember to use malloc to initialize structs.
-// create an array of structs
-// sort according to hours, then minutes, then seconds.
-typedef struct _temperature{
-	int tempInC;
-	int tempInF;
-	int hour;
-	int min;
-	int sec;
-
-
-};
 
 
 

@@ -6,14 +6,14 @@ Building file: ../lab3.asm
 Invoking: MSP430 Compiler
 "/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/bin/cl430" -vmspx --abi=coffabi -O0 -g --include_path="/Applications/ti/ccsv6/ccs_base/msp430/include" --include_path="/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/include" --define=__MSP430FG4618__ --diag_warning=225 --display_error_number --printf_support=minimal --preproc_with_compile --preproc_dependency="lab3.pp"  "../lab3.asm"
 1 Assembly Error, No Assembly Warnings
-
->> Compilation failure
 "../lab3.asm", ERROR!   at EOF: [E0300] The following symbols are undefined:
   START
-subdir_rules.mk:7: recipe for target 'lab3.obj' failed
   __STACK_END
 
+>> Compilation failure
+
 Errors in Source - Assembler Aborted
+subdir_rules.mk:7: recipe for target 'lab3.obj' failed
 gmake: *** [lab3.obj] Error 1
 gmake: Target 'all' not remade because of errors.
 

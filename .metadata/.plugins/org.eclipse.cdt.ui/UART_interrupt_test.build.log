@@ -23,11 +23,11 @@ Invoking: MSP430 Compiler
 "../main.c", line 59: error #20: identifier "uint8_t" is undefined
 "../main.c", line 61: error #20: identifier "uint16_t" is undefined
 "../main.c", line 92: error #20: identifier "BC_RX_WAKE_THRESH" is undefined
-"../main.c", line 11: remark #1535-D: (ULP 8.1) variable "bcUartRcvBufIndex" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
-"../main.c", line 15: remark #1535-D: (ULP 8.1) variable "bcUartRxThreshReached" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
 
 >> Compilation failure
 subdir_rules.mk:7: recipe for target 'main.obj' failed
+"../main.c", line 11: remark #1535-D: (ULP 8.1) variable "bcUartRcvBufIndex" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
+"../main.c", line 15: remark #1535-D: (ULP 8.1) variable "bcUartRxThreshReached" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
 16 errors detected in the compilation of "../main.c".
 gmake: *** [main.obj] Error 1
 gmake: Target 'all' not remade because of errors.

@@ -1,10 +1,10 @@
 ******************************************************************************
                   MSP430 Linker Unix v4.4.6                    
 ******************************************************************************
->> Linked Thu Mar 16 11:34:30 2017
+>> Linked Thu Mar 16 19:02:13 2017
 
 OUTPUT FILE NAME:   <Homework_3_Temperature_Clock.out>
-ENTRY POINT SYMBOL: "_c_int00_noargs_noexit"  address: 00004470
+ENTRY POINT SYMBOL: "_c_int00_noargs_noexit"  address: 00004472
 
 
 MEMORY CONFIGURATION
@@ -19,8 +19,8 @@ MEMORY CONFIGURATION
   INFOB                 00001900   00000080  00000000  00000080  RWIX
   INFOA                 00001980   00000080  00000000  00000080  RWIX
   USBRAM                00001c00   00000800  00000000  00000800  RWIX
-  RAM                   00002400   00002000  000000aa  00001f56  RWIX
-  FLASH                 00004400   0000bb80  000000c4  0000babc  RWIX
+  RAM                   00002400   00002000  000001ec  00001e14  RWIX
+  FLASH                 00004400   0000bb80  000000c6  0000baba  RWIX
   INT00                 0000ff80   00000002  00000000  00000002  RWIX
   INT01                 0000ff82   00000002  00000000  00000002  RWIX
   INT02                 0000ff84   00000002  00000000  00000002  RWIX
@@ -85,7 +85,7 @@ MEMORY CONFIGURATION
   INT61                 0000fffa   00000002  00000002  00000000  RWIX
   INT62                 0000fffc   00000002  00000002  00000000  RWIX
   RESET                 0000fffe   00000002  00000002  00000000  RWIX
-  FLASH2                00010000   00014400  0000054c  00013eb4  RWIX
+  FLASH2                00010000   00014400  00000654  00013dac  RWIX
 
 
 SECTION ALLOCATION MAP
@@ -93,31 +93,33 @@ SECTION ALLOCATION MAP
  output                                  attributes/
 section   page    origin      length       input sections
 --------  ----  ----------  ----------   ----------------
-.bss       0    00002400    0000000a     UNINITIALIZED
-                  00002400    00000002     (.common:hours)
-                  00002402    00000002     (.common:minutes)
-                  00002404    00000002     (.common:multiplesoffive)
-                  00002406    00000002     (.common:seconds)
-                  00002408    00000002     (.common:temp)
+.bss       0    00002400    0000014c     UNINITIALIZED
+                  00002400    00000140     (.common:alltemps)
+                  00002540    00000002     (.common:hours)
+                  00002542    00000002     (.common:index)
+                  00002544    00000002     (.common:minutes)
+                  00002546    00000002     (.common:multiplesoffive)
+                  00002548    00000002     (.common:seconds)
+                  0000254a    00000002     (.common:temp)
 
 .stack     0    00004360    000000a0     UNINITIALIZED
                   00004360    00000004     rts430x_lc_rd_eabi.lib : boot.obj (.stack)
                   00004364    0000009c     --HOLE--
 
 .text:_isr 
-*          0    00004400    000000b2     
-                  00004400    00000054     main.obj (.text:_isr:Timer_A0)
-                  00004454    0000001c     main.obj (.text:_isr:USCI_A1_ISR)
-                  00004470    0000001a     rts430x_lc_rd_eabi.lib : boot_special.obj (.text:_isr:_c_int00_noargs_noexit)
-                  0000448a    00000016     main.obj (.text:_isr:ADC12ISR)
-                  000044a0    00000006     main.obj (.text:_isr:Port_1)
-                  000044a6    00000006     main.obj (.text:_isr:Port_2)
-                  000044ac    00000006     rts430x_lc_rd_eabi.lib : isr_trap.obj (.text:_isr:__TI_ISR_TRAP)
+*          0    00004400    000000b4     
+                  00004400    00000056     main.obj (.text:_isr:Timer_A0)
+                  00004456    0000001c     main.obj (.text:_isr:USCI_A1_ISR)
+                  00004472    0000001a     rts430x_lc_rd_eabi.lib : boot_special.obj (.text:_isr:_c_int00_noargs_noexit)
+                  0000448c    00000016     main.obj (.text:_isr:ADC12ISR)
+                  000044a2    00000006     main.obj (.text:_isr:Port_1)
+                  000044a8    00000006     main.obj (.text:_isr:Port_2)
+                  000044ae    00000006     rts430x_lc_rd_eabi.lib : isr_trap.obj (.text:_isr:__TI_ISR_TRAP)
 
-.cinit     0    000044b2    00000012     
-                  000044b2    00000006     (.cinit..bss.load) [load image, compression = zero_init]
-                  000044b8    00000004     (__TI_handler_table)
-                  000044bc    00000008     (__TI_cinit_table)
+.cinit     0    000044b4    00000012     
+                  000044b4    00000006     (.cinit..bss.load) [load image, compression = zero_init]
+                  000044ba    00000004     (__TI_handler_table)
+                  000044be    00000008     (__TI_cinit_table)
 
 .init_array 
 *          0    00004400    00000000     UNINITIALIZED
@@ -199,33 +201,36 @@ SYSNMI     0    0000fffc    00000002
 .reset     0    0000fffe    00000002     
                   0000fffe    00000002     rts430x_lc_rd_eabi.lib : boot.obj (.reset)
 
-.text      0    00010000    0000054c     
+.text      0    00010000    00000654     
                   00010000    00000130     rts430x_lc_rd_eabi.lib : fs_add.obj (.text)
-                  00010130    000000b6                            : fs_mpy.obj (.text)
-                  000101e6    000000a4     main.obj (.text:getTemps)
-                  0001028a    00000096     main.obj (.text:main)
-                  00010320    0000008e     rts430x_lc_rd_eabi.lib : fs_div.obj (.text)
-                  000103ae    0000006c                            : autoinit_wdt.obj (.text:_auto_init_hold_wdt)
-                  0001041a    0000004a                            : fs_ltof.obj (.text)
-                  00010464    00000046                            : fs_tou.obj (.text)
-                  000104aa    00000024                            : copy_zero_init.obj (.text:decompress:ZI:__TI_zero_init)
-                  000104ce    00000024     main.obj (.text:init_UART)
-                  000104f2    00000024     rts430x_lc_rd_eabi.lib : fs_utof.obj (.text)
-                  00010516    00000022                            : mult32_f5hw.obj (.text)
-                  00010538    0000000c     main.obj (.text:OUTA_UART)
-                  00010544    00000004     rts430x_lc_rd_eabi.lib : pre_init.obj (.text:_system_pre_init)
-                  00010548    00000004                            : exit.obj (.text:abort)
+                  00010130    00000116     main.obj (.text:getTemps)
+                  00010246    000000b6     rts430x_lc_rd_eabi.lib : fs_mpy.obj (.text)
+                  000102fc    0000009e     main.obj (.text:main)
+                  0001039a    0000008e     rts430x_lc_rd_eabi.lib : fs_div.obj (.text)
+                  00010428    0000006c                            : autoinit_wdt.obj (.text:_auto_init_hold_wdt)
+                  00010494    00000058     main.obj (.text:initializeStruct)
+                  000104ec    0000004a     rts430x_lc_rd_eabi.lib : fs_ltof.obj (.text)
+                  00010536    00000046                            : fs_tou.obj (.text)
+                  0001057c    00000024                            : copy_zero_init.obj (.text:decompress:ZI:__TI_zero_init)
+                  000105a0    00000024     main.obj (.text:init_UART)
+                  000105c4    00000024     rts430x_lc_rd_eabi.lib : fs_utof.obj (.text)
+                  000105e8    00000022                            : mult32_f5hw.obj (.text)
+                  0001060a    00000020     main.obj (.text:displayTime)
+                  0001062a    00000016     rts430x_lc_rd_eabi.lib : mult16_f5hw.obj (.text)
+                  00010640    0000000c     main.obj (.text:OUTA_UART)
+                  0001064c    00000004     rts430x_lc_rd_eabi.lib : pre_init.obj (.text:_system_pre_init)
+                  00010650    00000004                            : exit.obj (.text:abort)
 
 
 LINKER GENERATED COPY TABLES
 
-__TI_cinit_table @ 000044bc records: 1, size/record: 8, table size: 8
-	.bss: load addr=000044b2, load size=00000006 bytes, run addr=00002400, run size=0000000a bytes, compression=zero_init
+__TI_cinit_table @ 000044be records: 1, size/record: 8, table size: 8
+	.bss: load addr=000044b4, load size=00000006 bytes, run addr=00002400, run size=0000014c bytes, compression=zero_init
 
 
 LINKER GENERATED HANDLER TABLE
 
-__TI_handler_table @ 000044b8 records: 1, size/record: 4, table size: 4
+__TI_handler_table @ 000044ba records: 1, size/record: 4, table size: 4
 	index: 0, handler: __TI_zero_init
 
 
@@ -248,7 +253,7 @@ address   name
 0000070a  ADC12IFG                
 0000070b  ADC12IFG_H              
 0000070a  ADC12IFG_L              
-0000448a  ADC12ISR                
+0000448c  ADC12ISR                
 0000070e  ADC12IV                 
 0000070f  ADC12IV_H               
 0000070e  ADC12IV_L               
@@ -316,7 +321,7 @@ address   name
 00000732  ADC12MEM9               
 00000733  ADC12MEM9_H             
 00000732  ADC12MEM9_L             
-00010548  C$$EXIT                 
+00010650  C$$EXIT                 
 000008c0  CBCTL0                  
 000008c1  CBCTL0_H                
 000008c0  CBCTL0_L                
@@ -450,7 +455,7 @@ address   name
 000004e0  OP2L_L                  
 000004c9  OP2_H                   
 000004c8  OP2_L                   
-00010538  OUTA_UART               
+00010640  OUTA_UART               
 0000020e  P1IV                    
 0000021e  P2IV                    
 000001e0  P4MAP01                 
@@ -582,8 +587,8 @@ address   name
 0000012e  PMMRIE                  
 0000012f  PMMRIE_H                
 0000012e  PMMRIE_L                
-000044a0  Port_1                  
-000044a6  Port_2                  
+000044a2  Port_1                  
+000044a8  Port_2                  
 00000158  RCCTL0                  
 00000159  RCCTL0_H                
 00000158  RCCTL0_L                
@@ -984,19 +989,19 @@ address   name
 00000932  USBVECINT               
 00000933  USBVECINT_H             
 00000932  USBVECINT_L             
-00004454  USCI_A1_ISR             
+00004456  USCI_A1_ISR             
 0000015c  WDTCTL                  
 0000015d  WDTCTL_H                
 0000015c  WDTCTL_L                
 00004400  __STACK_END             
 000000a0  __STACK_SIZE            
-000044bc  __TI_CINIT_Base         
-000044c4  __TI_CINIT_Limit        
-000044b8  __TI_Handler_Table_Base 
-000044bc  __TI_Handler_Table_Limit
+000044be  __TI_CINIT_Base         
+000044c6  __TI_CINIT_Limit        
+000044ba  __TI_Handler_Table_Base 
+000044be  __TI_Handler_Table_Limit
 UNDEFED   __TI_INITARRAY_Base     
 UNDEFED   __TI_INITARRAY_Limit    
-000044ac  __TI_ISR_TRAP           
+000044ae  __TI_ISR_TRAP           
 0000ffd2  __TI_int41              
 0000ffd4  __TI_int42              
 0000ffd6  __TI_int43              
@@ -1019,32 +1024,37 @@ UNDEFED   __TI_INITARRAY_Limit
 0000fff8  __TI_int60              
 0000fffa  __TI_int61              
 0000fffc  __TI_int62              
-000104aa  __TI_zero_init          
+0001057c  __TI_zero_init          
 ffffffff  __binit__               
 ffffffff  __c_args__              
 00010006  __mspabi_addf           
-00010320  __mspabi_divf           
-00010464  __mspabi_fixfu          
-0001041a  __mspabi_fltlif         
-000104f2  __mspabi_fltuf          
-00010130  __mspabi_mpyf           
-00010516  __mspabi_mpyl_f5hw      
+0001039a  __mspabi_divf           
+00010536  __mspabi_fixfu          
+000104ec  __mspabi_fltlif         
+000105c4  __mspabi_fltuf          
+00010246  __mspabi_mpyf           
+0001062a  __mspabi_mpyi_f5hw      
+000105e8  __mspabi_mpyl_f5hw      
 00010000  __mspabi_subf           
-000103ae  _auto_init_hold_wdt     
-00004470  _c_int00_noargs_noexit  
+00010428  _auto_init_hold_wdt     
+00004472  _c_int00_noargs_noexit  
 0000fffe  _reset_vector           
 00004360  _stack                  
-00010544  _system_pre_init        
-00010548  abort                   
+0001064c  _system_pre_init        
+00010650  abort                   
+00002400  alltemps                
 ffffffff  binit                   
-000101e6  getTemps                
-00002400  hours                   
-000104ce  init_UART               
-0001028a  main                    
-00002402  minutes                 
-00002404  multiplesoffive         
-00002406  seconds                 
-00002408  temp                    
+0001060a  displayTime             
+00010130  getTemps                
+00002540  hours                   
+00002542  index                   
+000105a0  init_UART               
+00010494  initializeStruct        
+000102fc  main                    
+00002544  minutes                 
+00002546  multiplesoffive         
+00002548  seconds                 
+0000254a  temp                    
 
 
 GLOBAL SYMBOLS: SORTED BY Symbol Address 
@@ -1800,24 +1810,26 @@ address   name
 000023fd  USBIEPBBAY_7            
 000023fe  USBIEPBCTY_7            
 000023ff  USBIEPSIZXY_7           
-00002400  hours                   
-00002402  minutes                 
-00002404  multiplesoffive         
-00002406  seconds                 
-00002408  temp                    
+00002400  alltemps                
+00002540  hours                   
+00002542  index                   
+00002544  minutes                 
+00002546  multiplesoffive         
+00002548  seconds                 
+0000254a  temp                    
 00004360  _stack                  
 00004400  Timer_A0                
 00004400  __STACK_END             
-00004454  USCI_A1_ISR             
-00004470  _c_int00_noargs_noexit  
-0000448a  ADC12ISR                
-000044a0  Port_1                  
-000044a6  Port_2                  
-000044ac  __TI_ISR_TRAP           
-000044b8  __TI_Handler_Table_Base 
-000044bc  __TI_CINIT_Base         
-000044bc  __TI_Handler_Table_Limit
-000044c4  __TI_CINIT_Limit        
+00004456  USCI_A1_ISR             
+00004472  _c_int00_noargs_noexit  
+0000448c  ADC12ISR                
+000044a2  Port_1                  
+000044a8  Port_2                  
+000044ae  __TI_ISR_TRAP           
+000044ba  __TI_Handler_Table_Base 
+000044be  __TI_CINIT_Base         
+000044be  __TI_Handler_Table_Limit
+000044c6  __TI_CINIT_Limit        
 0000ffd2  __TI_int41              
 0000ffd4  __TI_int42              
 0000ffd6  __TI_int43              
@@ -1843,25 +1855,28 @@ address   name
 0000fffe  _reset_vector           
 00010000  __mspabi_subf           
 00010006  __mspabi_addf           
-00010130  __mspabi_mpyf           
-000101e6  getTemps                
-0001028a  main                    
-00010320  __mspabi_divf           
-000103ae  _auto_init_hold_wdt     
-0001041a  __mspabi_fltlif         
-00010464  __mspabi_fixfu          
-000104aa  __TI_zero_init          
-000104ce  init_UART               
-000104f2  __mspabi_fltuf          
-00010516  __mspabi_mpyl_f5hw      
-00010538  OUTA_UART               
-00010544  _system_pre_init        
-00010548  C$$EXIT                 
-00010548  abort                   
+00010130  getTemps                
+00010246  __mspabi_mpyf           
+000102fc  main                    
+0001039a  __mspabi_divf           
+00010428  _auto_init_hold_wdt     
+00010494  initializeStruct        
+000104ec  __mspabi_fltlif         
+00010536  __mspabi_fixfu          
+0001057c  __TI_zero_init          
+000105a0  init_UART               
+000105c4  __mspabi_fltuf          
+000105e8  __mspabi_mpyl_f5hw      
+0001060a  displayTime             
+0001062a  __mspabi_mpyi_f5hw      
+00010640  OUTA_UART               
+0001064c  _system_pre_init        
+00010650  C$$EXIT                 
+00010650  abort                   
 ffffffff  __binit__               
 ffffffff  __c_args__              
 ffffffff  binit                   
 UNDEFED   __TI_INITARRAY_Base     
 UNDEFED   __TI_INITARRAY_Limit    
 
-[812 symbols]
+[817 symbols]

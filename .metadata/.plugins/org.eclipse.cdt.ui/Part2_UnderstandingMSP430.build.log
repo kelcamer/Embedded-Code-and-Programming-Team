@@ -17,8 +17,8 @@ remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recomm
 remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
 
 >> Compilation failure
-gmake: *** [Part2_UnderstandingMSP430.out] Error 1
 makefile:137: recipe for target 'Part2_UnderstandingMSP430.out' failed
+gmake: *** [Part2_UnderstandingMSP430.out] Error 1
 gmake: Target 'all' not remade because of errors.
 
 **** Build Finished ****
