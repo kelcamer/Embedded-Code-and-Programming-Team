@@ -1,0 +1,71 @@
+
+public class sorting {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] board = {1000, 88, 3, 1, 99, 46, 70, 109, 108, 45};
+		insert(board);
+		print(board);
+		
+		
+		insertion_sort(board);
+		
+		
+		
+	}
+	public static void insert(int[] array){
+		/*
+		 * 1.  Assume first value is sorted.
+		 * 2.  Go to next value.
+		 * 3.  Compare to each previous value and swap accordingly.
+		 */
+		
+		for(int x = 1; x < array.length; x++){
+			// gets current index, and loops backward until 1 again.
+			int j = x;
+			while(j > 0 && array[j-1] > array[j]){
+				// swap
+				int num = array[j];
+				array[j] = array[j-1];
+				array[j-1] = num;
+				j--;
+			}
+			
+			
+		}
+		
+		
+		
+		
+	}
+	public static void bubbleSort(int[] board){
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	public static void print(int[] board){
+		for(int x = 0; x < board.length; x++){
+			System.out.println(board[x]);
+		}
+	}
+	public static void insertion_sort(int[] array){
+		
+		for(int a = 1; a < array.length; a++){
+			int num = array[a];
+			int j = a;
+			while(j > 0 && array[j-1] > num){
+				// swapping the number at j and j-1
+				array[j] = array[j-1];
+				j--;
+			}
+			array[j] = num;
+		}
+		
+		
+	}
+}

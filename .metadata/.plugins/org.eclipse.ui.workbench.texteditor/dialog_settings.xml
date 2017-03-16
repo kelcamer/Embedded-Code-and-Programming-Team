@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="add" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="add"/>
+			<item value="Port"/>
+			<item value="Port_1"/>
+			<item value="Port_1(void)"/>
+			<item value="PORT"/>
+			<item value="USCI A1"/>
+			<item value="UCARXBUF"/>
+			<item value="UART"/>
+		</list>
+		<list key="replacehistory">
+			<item value="1, &quot;"/>
+			<item value=", &quot;1"/>
+			<item value="init"/>
+			<item value="last_x"/>
+			<item value=""/>
+			<item value="listofedges"/>
+			<item value="SynchronizedBuffer.occupied"/>
+			<item value="System.out.println(&quot;Placing &quot; + completeBin.charAt(mastercount) + &quot; at row &quot; + cur_row + &quot; col &quot; + cur_col);&#x0A;"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="265" key="DIALOG_WIDTH"/>
+		<item value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont" key="DIALOG_FONT_NAME"/>
+		<item value="399" key="DIALOG_HEIGHT"/>
+		<item value="280" key="DIALOG_Y_ORIGIN"/>
+		<item value="769" key="DIALOG_X_ORIGIN"/>
+	</section>
+</section>

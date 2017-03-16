@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 4 elements to &apos;synchro2/src/synchro&apos;&#x0A;- Original project: &apos;synchro&apos;&#x0A;- Destination element: &apos;synchro2/src/synchro&apos;&#x0A;- Original elements:&#x0A;     synchro.SynchroTest.java&#x0A;     synchro.Producer.java&#x0A;     synchro.Consumer.java&#x0A;     synchro.SynchronizedBuffer.java" description="Copy compilation units" destination="=synchro2/src&lt;synchro" element1="/src&lt;synchro{SynchroTest.java" element2="/src&lt;synchro{Producer.java" element3="/src&lt;synchro{Consumer.java" element4="/src&lt;synchro{SynchronizedBuffer.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1447817034645" units="4" version="1.0"/>
+</session>

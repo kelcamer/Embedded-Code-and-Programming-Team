@@ -1,0 +1,25 @@
+
+**** Build of configuration Debug for project Interrupts_Assembly ****
+
+/Applications/ti/ccsv6/utils/bin/gmake -k all 
+Building target: Interrupts_Assembly.out
+Invoking: MSP430 Linker
+"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/bin/cl430" -vmspx --abi=eabi --data_model=restricted --use_hw_mpy=F5 --advice:power=all -g --define=__MSP430F5529__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --printf_support=minimal -z -m"Interrupts_Assembly.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"/Applications/ti/ccsv6/ccs_base/msp430/include" -i"/Applications/ti/ccsv6/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/lib" -i"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="Interrupts_Assembly_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Interrupts_Assembly.out" "./interrupts.obj" "../lnk_msp430f5529.cmd"  -l"libmath.a" -l"libc.a" 
+<Linking>
+"../lnk_msp430f5529.cmd", line 233: error #10099-D: program will not fit into available memory.  placement with alignment fails for section ".reset" size 0x4 .  Available memory ranges:
+   RESET        size: 0x2          unused: 0x2          max hole: 0x2       
+
+ undefined first referenced                                                                                      
+  symbol       in file                                                                                           
+ --------- ----------------                                                                                      
+ main      /Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/lib/rts430x_lc_rd_eabi.lib<boot_special.obj>
+
+error #10234-D: unresolved symbols remain
+error #10010: errors encountered during linking; "Interrupts_Assembly.out" not built
+
+>> Compilation failure
+makefile:136: recipe for target 'Interrupts_Assembly.out' failed
+gmake: *** [Interrupts_Assembly.out] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****

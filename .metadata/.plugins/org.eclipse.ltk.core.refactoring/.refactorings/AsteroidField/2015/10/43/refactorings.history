@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Asteroid.java&apos; to &apos;AsteroidGame/src/asteroidgame&apos;&#x0A;- Original project: &apos;AsteroidField&apos;&#x0A;- Destination element: &apos;AsteroidGame/src/asteroidgame&apos;&#x0A;- Original element: &apos;Asteroid.java&apos;" description="Copy compilation unit" destination="=AsteroidGame/src&lt;asteroidgame" element1="/src&lt;{Asteroid.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1445479431877" units="1" version="1.0"/>
+</session>

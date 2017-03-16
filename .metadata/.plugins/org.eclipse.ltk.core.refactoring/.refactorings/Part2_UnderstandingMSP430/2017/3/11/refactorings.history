@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;template.c&apos; to &apos;Part2_UnderstandingMSP430&apos;" description="Move &apos;template.c&apos; to &apos;Part2_UnderstandingMSP430&apos;" destination="/Part2_UnderstandingMSP430" element1="/Homework_3_Temperature_Clock/template.c" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1489607503269" updateReferences="true"/>
+</session>

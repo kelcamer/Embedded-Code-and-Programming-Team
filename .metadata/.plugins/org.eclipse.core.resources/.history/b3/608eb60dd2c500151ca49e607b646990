@@ -1,0 +1,129 @@
+/*
+ * Name: Kelsey Cameron
+ * Course Number: COP3503C-16Spring 0001
+ * Assignment title:  Lottery Game
+ * Date: January 15, 2016
+ */
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Enumeration;
+import java.util.Scanner;
+import java.util.Vector;
+
+public class lottery {
+
+	public static void main(String[] args) throws FileNotFoundException {
+
+		// scans in data
+		System.out.println("Enter the name of the file with the ticket data.");
+		Scanner scan = new Scanner(System.in);
+		Scanner scanny = new Scanner(new File(scan.next()));
+		System.out.println("Enter the winning Lottery numbers.");
+
+		// scans in winning numbers
+		int[] winner = new int[6];
+		for (int x = 0; x < 6; x++) {
+			winner[x] = scan.nextInt();
+		}
+		int loop = scanny.nextInt();
+
+		// creates an enumeration
+		Enumeration<ticket> ticket_main;
+
+		// creates a vector to store the enumeration
+		Vector<ticket> all_people = new Vector<ticket>();
+
+		// stores all the ticket info, and adds it to the list.
+		for (int x = 0; x < loop; x++) {
+			String last = scanny.next();
+			String first = scanny.next();
+
+			ticket t = new ticket(first, last, scanny);
+			all_people.add(t);
+
+		}
+
+		// transfers list back to enumeration
+		ticket_main = all_people.elements();
+
+		// loops through all tickets and compares to next element
+		while (ticket_main.hasMoreElements()) {
+			ticket temp = ticket_main.nextElement();
+
+			// calculates how many numbers match
+			int matches = comparePersonToWinner(temp, winner);
+
+			// prints result
+			result(matches, temp);
+
+		}
+		scan.close();
+		scanny.close();
+	}
+
+	private static void result(int matches, ticket t) {
+		// uses a switch statement to determine what to print
+		switch (matches) {
+		case 3:
+			System.out.println(t.first + " " + t.last + " matched " + matches + " numbers and won $10.");
+			break;
+		case 4:
+			System.out.println(t.first + " " + t.last + " matched " + matches + " numbers and won $100.");
+			break;
+		case 5:
+			System.out.println(t.first + " " + t.last + " matched " + matches + " numbers and won $10000.");
+			break;
+		case 6:
+			System.out.println(t.first + " " + t.last + " matched " + matches + " numbers and won $1000000.");
+			break;
+
+		}
+
+	}
+
+	private static int comparePersonToWinner(ticket next, int[] winner) {
+		// look for winning numbers inside of ticket.numbers
+		// different ways of doing this... double for loop actually isn't that
+		// inefficient
+		// we are only looping 6*6 = 36 times.
+		int[] list = new int[6];
+		list = next.numbers;
+		int count = 0;
+
+		// loops through every number combination
+		for (int x = 0; x < 6; x++) {
+			for (int y = 0; y < 6; y++) {
+				if (list[x] == winner[y]) {
+					count++;
+				}
+			}
+		}
+
+		return count;
+
+	}
+
+}
+
+// creates an object called a ticket with a first name, last name, and list of
+// nums
+class ticket {
+	String first;
+	String last;
+	int[] numbers;
+
+	ticket(String f, String a, Scanner scan) {
+		// stores the data from the constructor
+		numbers = new int[6];
+		this.first = f;
+		this.last = a;
+
+		// implicitly gets the number data
+		for (int y = 0; y < 6; y++) {
+			numbers[y] = scan.nextInt();
+		}
+
+	}
+
+}

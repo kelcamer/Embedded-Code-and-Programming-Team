@@ -1,0 +1,76 @@
+/**
+ ** Java Program to implement Longest Common Subsequence Algorithm
+ **/
+ 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+ 
+/** Class  LongestCommonSubsequence **/
+public class  longest_common_subsequence_example
+{    
+    /** function lcs **/
+	// Goes in opposite direction as example in video. Still makes sense though
+    public String lcs(String str1, String str2)
+    {
+    	// 6
+        int l1 = str1.length();
+        // 12
+        int l2 = str2.length();
+ 
+        // create a new 2D array that can store (6*12 values)
+        int[][] arr = new int[l1 + 1][l2 + 1];
+ 
+        // loop through first string starting from end
+        for (int i = l1 - 1; i >= 0; i--)
+        {
+        	// loop through second string starting from end
+            for (int j = l2 - 1; j >= 0; j--)
+            {
+            	// if characters match, set the array equal to the one below and right + 1
+                if (str1.charAt(i) == str2.charAt(j)){
+                    arr[i][j] = arr[i + 1][j + 1] + 1;
+                	System.out.println(arr[i+1][j+1]);
+                }
+                // else get the max of of the left and top
+                else 
+                    arr[i][j] = Math.max(arr[i + 1][j], arr[i][j + 1]);
+            }
+        }
+ 
+        int i = 0, j = 0;
+        StringBuffer sb = new StringBuffer();
+        while (i < l1 && j < l2) 
+        {
+            if (str1.charAt(i) == str2.charAt(j)) 
+            {
+                sb.append(str1.charAt(i));
+                i++;
+                j++;
+            }
+            else if (arr[i + 1][j] >= arr[i][j + 1]) 
+                i++;
+            else
+                j++;
+        }
+        return sb.toString();
+    }
+ 
+    /** Main Function **/
+    public static void main(String[] args) throws IOException
+    {    
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Longest Common Subsequence Algorithm Test\n");
+ 
+        System.out.println("\nEnter string 1");
+        String str1 = br.readLine();
+ 
+        System.out.println("\nEnter string 2");
+        String str2 = br.readLine();
+ 
+        longest_common_subsequence_example obj = new longest_common_subsequence_example(); 
+        String result = obj.lcs(str1, str2);
+ 
+        System.out.println("\nLongest Common Subsequence : "+ result);
+    }
+}

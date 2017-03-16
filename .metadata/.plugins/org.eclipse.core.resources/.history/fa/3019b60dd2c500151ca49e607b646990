@@ -1,0 +1,73 @@
+
+public class QuickSort 
+{
+	public static void main(String[] args){
+		int[] main = {66,92,45,35,59,78,16,23,56};
+		// after partition:
+		// 23, 16, 45, 35, 56, 78, 66, 92, 59,
+		
+		printAr(main);
+		//DoQuickSort(main);
+		partition(main, 0, main.length-1, main[0]);
+		
+		System.out.println();
+		printAr(main);
+		
+		
+	}
+	public static void DoQuickSort( int[] a )
+	{
+		DoQuickSort(a, 0, a.length-1);
+	}
+	
+	public static void DoQuickSort( int[] a, int lo, int hi )
+	{
+		if(lo < hi){
+			// the pivot is simply an index
+			int pivot = partition(a, lo, hi, 0);
+			DoQuickSort(a, lo, pivot-1);
+			DoQuickSort(a, pivot+1, hi);
+			
+		}
+		
+		
+	}
+	public static void printAr(int[] ar){
+		for(int x = 0; x < ar.length; x++){
+			System.out.print(ar[x] + " ");
+			
+		}
+	}
+	static int partition( int[] list, int lo, int hi, int pivot)
+	{
+		// we shall assume the pivot is the leftmost one
+		int start = lo;
+		// loop through rest of array
+		for(int x = lo; x < hi; x++){
+			if(list[x] < pivot){
+				// swap pivot with current location
+				swap(list, start, x);
+				// your pivot will never be more than 1 unit away from the value you are checking.
+				start++;
+			}
+			else if(list[x] == pivot){
+				// shove all the same numbers in back.
+				//swap(list, x, hi);
+				// you just put the same number over there, you dont need to check it again.
+				x--;
+				
+			}
+			
+		
+			swap(list, start, hi);
+			
+		}
+
+		return(start);
+	}
+	static void swap(int[] ar, int ind1, int ind2){
+		int temp = ar[ind1];
+		ar[ind1]= ar[ind2];
+		ar[ind2] = temp;
+	}
+}

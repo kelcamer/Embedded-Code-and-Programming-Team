@@ -1,0 +1,126 @@
+
+public class CaesarCypher {
+	static double[] expectedValues = {8.2, 1.5, 2.8, 4.3, 12.7, 2.2, 2.0, 6.1, 7.0, 0.2, 0.8, 4.0, 2.4, 6.7,
+			7.5, 1.9, 0.1, 6.0, 6.3, 9.1, 2.8, 1.0, 2.4, 0.2, 2.0, 0.1};
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("myxqbkdevkdsyxc yx mywzvodsxq dro ohkw!");
+		System.out.println(crack(encode(3, "thefiveboxingwizardsjumpquickly")));
+	}
+	
+	static int let2nat( char c){
+		int someNumber = c - 'a';
+		return someNumber;
+	}
+	
+	static char nat2let(int code){
+		char someLetter = (char)(code + 'a');
+		return someLetter;
+	}
+	
+	static char shift(int shiftAmt, char c){
+		shiftAmt=shiftAmt %26;						//so large shift amounts make sense
+		if(c-'a' < 0 || c-'a' >25) return c;
+		int someNumber = let2nat(c);
+		
+		someNumber+=shiftAmt;
+		someNumber+=26;								//so negative numbers will become positive
+		someNumber = someNumber %26;				//so numbers over the legal limit are put into the correct lane
+
+		return nat2let(someNumber);
+	}
+	
+	static String encode(int shiftAmt, String str){
+		String returnString = "";
+		for(int i =0; i<str.length(); i++){
+			returnString += shift(shiftAmt, str.charAt(i));
+		}
+		
+		return returnString;
+	}
+	
+	static String decode(int shiftAmt, String str){
+		String returnString = "";
+		for(int i =0; i<str.length(); i++){
+			returnString += shift(shiftAmt*(-1), str.charAt(i));
+		}
+		
+		return returnString;
+	}
+	
+	static int lowers(String str){
+		int lowerCounter = 0;
+		for(int i = 0; i<str.length(); i++){
+			if(str.charAt(i) -'a' >= 0 && str.charAt(i) - 'a' < 26) lowerCounter++;
+		}
+		
+		return lowerCounter;
+	}
+	
+	static int count(char c, String str){
+		int charCounter = 0;
+		for(int i = 0; i < str.length(); i++){
+			if(str.charAt(i) == c) charCounter++;
+		}
+		return charCounter;
+	}
+	
+	static double percent(int num1, int num2){
+		return ((double)num1/(double)num2)*100;
+	}
+	
+	static double[] freqs(String str){
+		double frequency[] = new double[26];
+		int lowers = lowers(str);				//no need to do lowers more than once. saves machine power for something more useful
+		for(int i = 0; i<26; i++){				//i represents each letter in the alphabet
+			frequency[i] = percent(count(nat2let(i), str), lowers);
+		}
+		return frequency;
+	}
+	
+	static double[] rotate(int n, double[] list){
+		if(n <= 0) return list;
+		n=n%list.length;
+		
+		double listCopy[] = new double[list.length];
+		
+		for(int i = 0; i<list.length; i++){
+			listCopy[i] = list[(i+n+list.length)%list.length];
+			
+		}
+		return listCopy;
+	}
+	
+	static double chisqr(double[] os){
+		double sum = 0;
+		for(int i = 0; i<26; i++){
+			sum+=Math.pow(os[i]-expectedValues[i], 2)/expectedValues[i];
+		}
+		return sum;
+	}
+	
+	static int position(double a, double list[]){
+		for(int i=0; i<list.length;i++){
+			if(list[i]==a)return i;
+		}
+		return -1;
+	}
+	
+	static String crack(String str){
+		double letterFreq[] = freqs(str);
+		double minValue = 999999999;
+		double chiSquares[] = new double[26];
+		for(int i =0; i<26; i++){
+			chiSquares[i] = chisqr(rotate(i, letterFreq));
+		}
+		for(int i = 0; i<26; i++){
+			if(minValue>chiSquares[i]) minValue = chiSquares[i];
+		}
+		
+		for(int i =0; i<26; i++){
+			System.out.printf("\nx %d %lf", i, chiSquares[i]);
+		}
+		return decode(position(minValue, chiSquares), str);
+	}
+}

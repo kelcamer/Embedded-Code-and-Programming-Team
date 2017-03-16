@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;i&apos; in &apos;CS2ProgrammingWeek5.groupSumsTargetClump(...)&apos; to &apos;count&apos;&#x0A;- Original project: &apos;Computer Science 2&apos;&#x0A;- Original element: &apos;CS2ProgrammingWeek5.groupSumsTargetClump(int, int[], int).i&apos;&#x0A;- Renamed element: &apos;i&apos;&#x0A;- Update references to refactored element" description="Rename local variable &apos;i&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/&lt;{CS2ProgrammingWeek5.java[CS2ProgrammingWeek5~groupSumsTargetClump~I~\[I~I@i!7607!7621!7611!7611!I!0!false" name="count" references="true" stamp="1455469659250" version="1.0"/>
+</session>
