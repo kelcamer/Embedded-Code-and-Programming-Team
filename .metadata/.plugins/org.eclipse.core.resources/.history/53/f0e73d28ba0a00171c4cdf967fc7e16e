@@ -477,9 +477,9 @@ __interrupt void Timer_A0 (void)
 		hours = 0;
 	}
 	// comment this out
-	//if(seconds == 5){
-	//	getTemps();
-	//}
+	if(seconds == 5){
+		getTemps();
+	}
 P1OUT ^= BIT0;
 
 
