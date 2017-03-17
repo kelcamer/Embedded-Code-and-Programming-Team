@@ -247,8 +247,6 @@ void displayAllTemps(void){
 						}
 
 
-			OUTA_UART(0x0D);
-			OUTA_UART(0x0A);
 
 			state = 1;
 		}
@@ -269,6 +267,8 @@ void displayAllTemps(void){
 		}
 		}
 
+	OUTA_UART(0x0D);
+	OUTA_UART(0x0A);
 }
 int convertToNum(char first, char second){
 	// take '1' and '1' and convert to 11
@@ -297,7 +297,8 @@ void displayStampedTime(int index){
 			for(z = 0; z < 2; z++){
 				OUTA_UART(test[z]);
 			}
-
+			OUTA_UART(0x0D);
+			OUTA_UART(0x0A);
 
 }
 
@@ -346,9 +347,10 @@ void displayOldest(void){
 
 
 				state = 1;
+				OUTA_UART(0x0D);
+				OUTA_UART(0x0A);
 				break;
 			}
-
 	}
 	if(state == 0){
 				// print no recorded temps
@@ -361,9 +363,9 @@ void displayOldest(void){
 
 
 			}
-			}
 			OUTA_UART(0x0D);
 			OUTA_UART(0x0A);
+			}
 }
 /*void sortStruct(){
 	int x = 0;
@@ -434,6 +436,7 @@ void useCommands(char c){
 		displayOldest();
 
 	}
+
 	else if(c == 'l'){
 		// show all temp readings
 		displayAllTemps();
@@ -527,6 +530,7 @@ P1IFG &= ~BIT1; // P1.1 interrupt flag cleared
 __interrupt void Port_2(void)
 {
 useCommands('t');
+
 useCommands('l');
 
 

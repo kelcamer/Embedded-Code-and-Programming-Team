@@ -3488,3 +3488,880 @@ makefile:136: recipe for target 'lab3_completeCcode.out' failed
 gmake: Nothing to be done for 'all'.
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project Homework_3_Temperature_Clock ****
+
+/Applications/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../main.c
+Invoking: MSP430 Compiler
+"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/bin/cl430" -vmspx --abi=eabi --data_model=restricted --use_hw_mpy=F5 --include_path="/Applications/ti/ccsv6/ccs_base/msp430/include" --include_path="/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/include" --advice:power=all -g --define=__MSP430F5529__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --printf_support=minimal --preproc_with_compile --preproc_dependency="main.pp"  "../main.c"
+"../main.c", line 82: warning #70-D: integer conversion resulted in truncation
+"../main.c", line 126: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 132: remark #1528-D: (ULP 3.1) Detected flag polling using UCRXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 177: warning #994-D: missing return statement at end of non-void function "getTemps"
+"../main.c", line 157: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 160: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 191: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 192: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 196: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 197: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 201: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 202: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 224: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 225: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 226: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 227: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 228: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 229: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 236: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 238: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 238: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 238: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 243: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 245: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 246: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 264: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 243: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 245: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 246: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 264: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 285: remark #2553-D: (ULP 14.1) Array index (involving "index") of type "int". Recommend using "unsigned int"
+"../main.c", line 287: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 288: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 290: remark #2553-D: (ULP 14.1) Array index (involving "index") of type "int". Recommend using "unsigned int"
+"../main.c", line 292: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 293: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 295: remark #2553-D: (ULP 14.1) Array index (involving "index") of type "int". Recommend using "unsigned int"
+"../main.c", line 297: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 298: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 329: warning #121-D: return value type does not match the function type
+"../main.c", line 329: warning #1132-D: returning pointer to local variable
+"../main.c", line 312: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 335: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 335: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 335: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 340: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 342: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 343: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 358: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 340: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 342: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 343: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 358: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 472: remark #1538-D: (ULP 10.1) ISR Timer_A0 calls function getTemps. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 495: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 491: warning #548-D: transfer of control bypasses initialization of:
+            variable "c" (declared at line 497)
+"../main.c", line 505: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 505: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 529: remark #1538-D: (ULP 10.1) ISR Port_2 calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 530: remark #1538-D: (ULP 10.1) ISR Port_2 calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 157 (col. 23): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 158 (col. 53): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 160 (col. 23): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 162 (col. 33): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 163 (col. 33): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: ../main.c
+ 
+Building target: Homework_3_Temperature_Clock.out
+Invoking: MSP430 Linker
+"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/bin/cl430" -vmspx --abi=eabi --data_model=restricted --use_hw_mpy=F5 --advice:power=all -g --define=__MSP430F5529__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --printf_support=minimal -z -m"Homework_3_Temperature_Clock.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"/Applications/ti/ccsv6/ccs_base/msp430/include" -i"/Applications/ti/ccsv6/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/lib" -i"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="Homework_3_Temperature_Clock_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Homework_3_Temperature_Clock.out" "./main.obj" "../lnk_msp430f5529.cmd"  -l"libmath.a" -l"libc.a" 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: Homework_3_Temperature_Clock.out
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Homework_3_Temperature_Clock ****
+
+/Applications/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../main.c
+Invoking: MSP430 Compiler
+"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/bin/cl430" -vmspx --abi=eabi --data_model=restricted --use_hw_mpy=F5 --include_path="/Applications/ti/ccsv6/ccs_base/msp430/include" --include_path="/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/include" --advice:power=all -g --define=__MSP430F5529__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --printf_support=minimal --preproc_with_compile --preproc_dependency="main.pp"  "../main.c"
+"../main.c", line 82: warning #70-D: integer conversion resulted in truncation
+"../main.c", line 126: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 132: remark #1528-D: (ULP 3.1) Detected flag polling using UCRXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 177: warning #994-D: missing return statement at end of non-void function "getTemps"
+"../main.c", line 157: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 160: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 191: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 192: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 196: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 197: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 201: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 202: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 224: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 225: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 226: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 227: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 228: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 229: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 236: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 238: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 238: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 238: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 243: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 245: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 246: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 262: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 243: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 245: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 246: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 262: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 285: remark #2553-D: (ULP 14.1) Array index (involving "index") of type "int". Recommend using "unsigned int"
+"../main.c", line 287: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 288: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 290: remark #2553-D: (ULP 14.1) Array index (involving "index") of type "int". Recommend using "unsigned int"
+"../main.c", line 292: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 293: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 295: remark #2553-D: (ULP 14.1) Array index (involving "index") of type "int". Recommend using "unsigned int"
+"../main.c", line 297: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 298: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 329: warning #121-D: return value type does not match the function type
+"../main.c", line 329: warning #1132-D: returning pointer to local variable
+"../main.c", line 312: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 335: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 335: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 335: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 340: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 342: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 343: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 358: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 340: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 342: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 343: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 358: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 472: remark #1538-D: (ULP 10.1) ISR Timer_A0 calls function getTemps. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 495: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 491: warning #548-D: transfer of control bypasses initialization of:
+            variable "c" (declared at line 497)
+"../main.c", line 505: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 505: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 529: remark #1538-D: (ULP 10.1) ISR Port_2 calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 530: remark #1538-D: (ULP 10.1) ISR Port_2 calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 157 (col. 23): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 158 (col. 53): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 160 (col. 23): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 162 (col. 33): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 163 (col. 33): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: ../main.c
+ 
+Building target: Homework_3_Temperature_Clock.out
+Invoking: MSP430 Linker
+"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/bin/cl430" -vmspx --abi=eabi --data_model=restricted --use_hw_mpy=F5 --advice:power=all -g --define=__MSP430F5529__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --printf_support=minimal -z -m"Homework_3_Temperature_Clock.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"/Applications/ti/ccsv6/ccs_base/msp430/include" -i"/Applications/ti/ccsv6/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/lib" -i"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="Homework_3_Temperature_Clock_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Homework_3_Temperature_Clock.out" "./main.obj" "../lnk_msp430f5529.cmd"  -l"libmath.a" -l"libc.a" 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: Homework_3_Temperature_Clock.out
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Homework_3_Temperature_Clock ****
+
+/Applications/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../main.c
+Invoking: MSP430 Compiler
+"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/bin/cl430" -vmspx --abi=eabi --data_model=restricted --use_hw_mpy=F5 --include_path="/Applications/ti/ccsv6/ccs_base/msp430/include" --include_path="/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/include" --advice:power=all -g --define=__MSP430F5529__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --printf_support=minimal --preproc_with_compile --preproc_dependency="main.pp"  "../main.c"
+"../main.c", line 82: warning #70-D: integer conversion resulted in truncation
+"../main.c", line 126: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 132: remark #1528-D: (ULP 3.1) Detected flag polling using UCRXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 177: warning #994-D: missing return statement at end of non-void function "getTemps"
+"../main.c", line 157: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 160: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 191: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 192: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 196: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 197: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 201: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 202: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 224: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 225: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 226: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 227: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 228: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 229: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 236: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 238: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 238: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 238: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 243: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 245: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 246: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 262: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 243: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 245: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 246: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 262: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 285: remark #2553-D: (ULP 14.1) Array index (involving "index") of type "int". Recommend using "unsigned int"
+"../main.c", line 287: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 288: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 290: remark #2553-D: (ULP 14.1) Array index (involving "index") of type "int". Recommend using "unsigned int"
+"../main.c", line 292: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 293: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 295: remark #2553-D: (ULP 14.1) Array index (involving "index") of type "int". Recommend using "unsigned int"
+"../main.c", line 297: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 298: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 330: warning #121-D: return value type does not match the function type
+"../main.c", line 330: warning #1132-D: returning pointer to local variable
+"../main.c", line 313: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 336: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 336: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 336: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 341: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 343: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 344: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 359: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 341: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 343: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 344: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 359: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 473: remark #1538-D: (ULP 10.1) ISR Timer_A0 calls function getTemps. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 496: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 492: warning #548-D: transfer of control bypasses initialization of:
+            variable "c" (declared at line 498)
+"../main.c", line 506: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 506: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 530: remark #1538-D: (ULP 10.1) ISR Port_2 calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 531: remark #1538-D: (ULP 10.1) ISR Port_2 calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 157 (col. 23): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 158 (col. 53): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 160 (col. 23): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 162 (col. 33): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 163 (col. 33): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: ../main.c
+ 
+Building target: Homework_3_Temperature_Clock.out
+Invoking: MSP430 Linker
+"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/bin/cl430" -vmspx --abi=eabi --data_model=restricted --use_hw_mpy=F5 --advice:power=all -g --define=__MSP430F5529__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --printf_support=minimal -z -m"Homework_3_Temperature_Clock.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"/Applications/ti/ccsv6/ccs_base/msp430/include" -i"/Applications/ti/ccsv6/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/lib" -i"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="Homework_3_Temperature_Clock_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Homework_3_Temperature_Clock.out" "./main.obj" "../lnk_msp430f5529.cmd"  -l"libmath.a" -l"libc.a" 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: Homework_3_Temperature_Clock.out
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Homework_3_Temperature_Clock ****
+
+/Applications/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../main.c
+Invoking: MSP430 Compiler
+"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/bin/cl430" -vmspx --abi=eabi --data_model=restricted --use_hw_mpy=F5 --include_path="/Applications/ti/ccsv6/ccs_base/msp430/include" --include_path="/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/include" --advice:power=all -g --define=__MSP430F5529__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --printf_support=minimal --preproc_with_compile --preproc_dependency="main.pp"  "../main.c"
+"../main.c", line 82: warning #70-D: integer conversion resulted in truncation
+"../main.c", line 126: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 132: remark #1528-D: (ULP 3.1) Detected flag polling using UCRXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 177: warning #994-D: missing return statement at end of non-void function "getTemps"
+"../main.c", line 157: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 160: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 191: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 192: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 196: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 197: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 201: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 202: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 224: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 225: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 226: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 227: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 228: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 229: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 236: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 238: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 238: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 238: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 243: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 245: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 246: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 262: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 243: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 245: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 246: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 262: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 285: remark #2553-D: (ULP 14.1) Array index (involving "index") of type "int". Recommend using "unsigned int"
+"../main.c", line 287: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 288: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 290: remark #2553-D: (ULP 14.1) Array index (involving "index") of type "int". Recommend using "unsigned int"
+"../main.c", line 292: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 293: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 295: remark #2553-D: (ULP 14.1) Array index (involving "index") of type "int". Recommend using "unsigned int"
+"../main.c", line 297: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 298: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 330: warning #121-D: return value type does not match the function type
+"../main.c", line 330: warning #1132-D: returning pointer to local variable
+"../main.c", line 313: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 336: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 336: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 336: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 341: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 343: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 344: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 359: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 341: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 343: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 344: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 359: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 474: remark #1538-D: (ULP 10.1) ISR Timer_A0 calls function getTemps. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 497: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 493: warning #548-D: transfer of control bypasses initialization of:
+            variable "c" (declared at line 499)
+"../main.c", line 507: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 507: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 531: remark #1538-D: (ULP 10.1) ISR Port_2 calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 532: remark #1538-D: (ULP 10.1) ISR Port_2 calls function OUTA_UART. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 533: remark #1538-D: (ULP 10.1) ISR Port_2 calls function OUTA_UART. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 534: remark #1538-D: (ULP 10.1) ISR Port_2 calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 157 (col. 23): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 158 (col. 53): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 160 (col. 23): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 162 (col. 33): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 163 (col. 33): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: ../main.c
+ 
+Building target: Homework_3_Temperature_Clock.out
+Invoking: MSP430 Linker
+"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/bin/cl430" -vmspx --abi=eabi --data_model=restricted --use_hw_mpy=F5 --advice:power=all -g --define=__MSP430F5529__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --printf_support=minimal -z -m"Homework_3_Temperature_Clock.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"/Applications/ti/ccsv6/ccs_base/msp430/include" -i"/Applications/ti/ccsv6/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/lib" -i"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="Homework_3_Temperature_Clock_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Homework_3_Temperature_Clock.out" "./main.obj" "../lnk_msp430f5529.cmd"  -l"libmath.a" -l"libc.a" 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: Homework_3_Temperature_Clock.out
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Homework_3_Temperature_Clock ****
+
+/Applications/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../main.c
+Invoking: MSP430 Compiler
+"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/bin/cl430" -vmspx --abi=eabi --data_model=restricted --use_hw_mpy=F5 --include_path="/Applications/ti/ccsv6/ccs_base/msp430/include" --include_path="/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/include" --advice:power=all -g --define=__MSP430F5529__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --printf_support=minimal --preproc_with_compile --preproc_dependency="main.pp"  "../main.c"
+"../main.c", line 82: warning #70-D: integer conversion resulted in truncation
+"../main.c", line 126: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 132: remark #1528-D: (ULP 3.1) Detected flag polling using UCRXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 177: warning #994-D: missing return statement at end of non-void function "getTemps"
+"../main.c", line 157: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 160: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 191: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 192: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 196: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 197: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 201: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 202: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 224: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 225: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 226: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 227: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 228: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 229: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 236: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 238: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 238: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 238: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 243: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 245: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 246: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 262: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 243: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 245: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 246: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 262: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 285: remark #2553-D: (ULP 14.1) Array index (involving "index") of type "int". Recommend using "unsigned int"
+"../main.c", line 287: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 288: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 290: remark #2553-D: (ULP 14.1) Array index (involving "index") of type "int". Recommend using "unsigned int"
+"../main.c", line 292: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 293: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 295: remark #2553-D: (ULP 14.1) Array index (involving "index") of type "int". Recommend using "unsigned int"
+"../main.c", line 297: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 298: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 330: warning #121-D: return value type does not match the function type
+"../main.c", line 330: warning #1132-D: returning pointer to local variable
+"../main.c", line 313: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 336: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 336: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 336: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 341: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 343: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 344: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 359: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 341: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 343: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 344: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 359: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 475: remark #1538-D: (ULP 10.1) ISR Timer_A0 calls function getTemps. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 498: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 494: warning #548-D: transfer of control bypasses initialization of:
+            variable "c" (declared at line 500)
+"../main.c", line 508: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 508: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 532: remark #1538-D: (ULP 10.1) ISR Port_2 calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 533: remark #1538-D: (ULP 10.1) ISR Port_2 calls function OUTA_UART. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 534: remark #1538-D: (ULP 10.1) ISR Port_2 calls function OUTA_UART. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 535: remark #1538-D: (ULP 10.1) ISR Port_2 calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 157 (col. 23): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 158 (col. 53): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 160 (col. 23): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 162 (col. 33): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 163 (col. 33): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: ../main.c
+ 
+Building target: Homework_3_Temperature_Clock.out
+Invoking: MSP430 Linker
+"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/bin/cl430" -vmspx --abi=eabi --data_model=restricted --use_hw_mpy=F5 --advice:power=all -g --define=__MSP430F5529__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --printf_support=minimal -z -m"Homework_3_Temperature_Clock.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"/Applications/ti/ccsv6/ccs_base/msp430/include" -i"/Applications/ti/ccsv6/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/lib" -i"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="Homework_3_Temperature_Clock_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Homework_3_Temperature_Clock.out" "./main.obj" "../lnk_msp430f5529.cmd"  -l"libmath.a" -l"libc.a" 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: Homework_3_Temperature_Clock.out
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Homework_3_Temperature_Clock ****
+
+/Applications/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../main.c
+Invoking: MSP430 Compiler
+"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/bin/cl430" -vmspx --abi=eabi --data_model=restricted --use_hw_mpy=F5 --include_path="/Applications/ti/ccsv6/ccs_base/msp430/include" --include_path="/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/include" --advice:power=all -g --define=__MSP430F5529__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --printf_support=minimal --preproc_with_compile --preproc_dependency="main.pp"  "../main.c"
+"../main.c", line 82: warning #70-D: integer conversion resulted in truncation
+"../main.c", line 126: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 132: remark #1528-D: (ULP 3.1) Detected flag polling using UCRXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 177: warning #994-D: missing return statement at end of non-void function "getTemps"
+"../main.c", line 157: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 160: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 191: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 192: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 196: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 197: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 201: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 202: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 224: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 225: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 226: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 227: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 228: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 229: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 236: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 238: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 238: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 238: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 243: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 245: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 246: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 262: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+
+>> Compilation failure
+"../main.c", line 243: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 245: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 246: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+subdir_rules.mk:7: recipe for target 'main.obj' failed
+"../main.c", line 262: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 285: remark #2553-D: (ULP 14.1) Array index (involving "index") of type "int". Recommend using "unsigned int"
+"../main.c", line 287: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 288: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 290: remark #2553-D: (ULP 14.1) Array index (involving "index") of type "int". Recommend using "unsigned int"
+"../main.c", line 292: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 293: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 295: remark #2553-D: (ULP 14.1) Array index (involving "index") of type "int". Recommend using "unsigned int"
+"../main.c", line 297: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 298: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 330: warning #121-D: return value type does not match the function type
+"../main.c", line 330: warning #1132-D: returning pointer to local variable
+"../main.c", line 313: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 354: error #20: identifier "d" is undefined
+"../main.c", line 354: error #66: expected a ";"
+"../main.c", line 366: warning #12-D: parsing restarts here after previous syntax error
+"../main.c", line 334: warning #552-D: variable "state" was set but never used
+"../main.c", line 403: error #68: expected a "}"
+"../main.c", line 336: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 336: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 336: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 341: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 343: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 344: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 341: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 343: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 344: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 474: remark #1538-D: (ULP 10.1) ISR Timer_A0 calls function getTemps. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 497: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 493: warning #548-D: transfer of control bypasses initialization of:
+            variable "c" (declared at line 499)
+"../main.c", line 507: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 507: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 531: remark #1538-D: (ULP 10.1) ISR Port_2 calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 532: remark #1538-D: (ULP 10.1) ISR Port_2 calls function OUTA_UART. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 533: remark #1538-D: (ULP 10.1) ISR Port_2 calls function OUTA_UART. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 534: remark #1538-D: (ULP 10.1) ISR Port_2 calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+3 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Homework_3_Temperature_Clock ****
+
+/Applications/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../main.c
+Invoking: MSP430 Compiler
+"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/bin/cl430" -vmspx --abi=eabi --data_model=restricted --use_hw_mpy=F5 --include_path="/Applications/ti/ccsv6/ccs_base/msp430/include" --include_path="/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/include" --advice:power=all -g --define=__MSP430F5529__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --printf_support=minimal --preproc_with_compile --preproc_dependency="main.pp"  "../main.c"
+"../main.c", line 82: warning #70-D: integer conversion resulted in truncation
+"../main.c", line 126: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 132: remark #1528-D: (ULP 3.1) Detected flag polling using UCRXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 177: warning #994-D: missing return statement at end of non-void function "getTemps"
+"../main.c", line 157: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 160: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 191: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 192: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 196: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 197: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 201: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 202: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 224: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 225: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 226: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 227: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 228: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 229: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 236: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 238: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 238: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 238: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 243: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 245: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 246: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+
+>> Compilation failure
+"../main.c", line 262: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 243: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+subdir_rules.mk:7: recipe for target 'main.obj' failed
+"../main.c", line 245: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 246: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 262: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 285: remark #2553-D: (ULP 14.1) Array index (involving "index") of type "int". Recommend using "unsigned int"
+"../main.c", line 287: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 288: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 290: remark #2553-D: (ULP 14.1) Array index (involving "index") of type "int". Recommend using "unsigned int"
+"../main.c", line 292: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 293: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 295: remark #2553-D: (ULP 14.1) Array index (involving "index") of type "int". Recommend using "unsigned int"
+"../main.c", line 297: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 298: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 330: warning #121-D: return value type does not match the function type
+"../main.c", line 330: warning #1132-D: returning pointer to local variable
+"../main.c", line 313: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 403: error #68: expected a "}"
+"../main.c", line 336: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 336: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 336: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 341: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 343: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 344: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 359: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 341: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 343: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 344: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 359: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 474: remark #1538-D: (ULP 10.1) ISR Timer_A0 calls function getTemps. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 497: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 493: warning #548-D: transfer of control bypasses initialization of:
+            variable "c" (declared at line 499)
+"../main.c", line 507: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 507: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 531: remark #1538-D: (ULP 10.1) ISR Port_2 calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 532: remark #1538-D: (ULP 10.1) ISR Port_2 calls function OUTA_UART. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 533: remark #1538-D: (ULP 10.1) ISR Port_2 calls function OUTA_UART. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 534: remark #1538-D: (ULP 10.1) ISR Port_2 calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Homework_3_Temperature_Clock ****
+
+/Applications/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../main.c
+Invoking: MSP430 Compiler
+"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/bin/cl430" -vmspx --abi=eabi --data_model=restricted --use_hw_mpy=F5 --include_path="/Applications/ti/ccsv6/ccs_base/msp430/include" --include_path="/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/include" --advice:power=all -g --define=__MSP430F5529__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --printf_support=minimal --preproc_with_compile --preproc_dependency="main.pp"  "../main.c"
+"../main.c", line 82: warning #70-D: integer conversion resulted in truncation
+"../main.c", line 126: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 132: remark #1528-D: (ULP 3.1) Detected flag polling using UCRXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 177: warning #994-D: missing return statement at end of non-void function "getTemps"
+"../main.c", line 157: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 160: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 191: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 192: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 196: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 197: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 201: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 202: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 224: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 225: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 226: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 227: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 228: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 229: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 236: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 238: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 238: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 238: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 243: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 245: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 246: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 262: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 243: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 245: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 246: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 262: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 285: remark #2553-D: (ULP 14.1) Array index (involving "index") of type "int". Recommend using "unsigned int"
+"../main.c", line 287: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 288: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 290: remark #2553-D: (ULP 14.1) Array index (involving "index") of type "int". Recommend using "unsigned int"
+"../main.c", line 292: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 293: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 295: remark #2553-D: (ULP 14.1) Array index (involving "index") of type "int". Recommend using "unsigned int"
+"../main.c", line 297: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 298: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 330: warning #121-D: return value type does not match the function type
+"../main.c", line 330: warning #1132-D: returning pointer to local variable
+"../main.c", line 313: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 336: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 336: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 336: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 341: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 343: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 344: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 359: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 341: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 343: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 344: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 359: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 474: remark #1538-D: (ULP 10.1) ISR Timer_A0 calls function getTemps. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 497: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 493: warning #548-D: transfer of control bypasses initialization of:
+            variable "c" (declared at line 499)
+"../main.c", line 507: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 507: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 531: remark #1538-D: (ULP 10.1) ISR Port_2 calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 532: remark #1538-D: (ULP 10.1) ISR Port_2 calls function OUTA_UART. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 533: remark #1538-D: (ULP 10.1) ISR Port_2 calls function OUTA_UART. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 534: remark #1538-D: (ULP 10.1) ISR Port_2 calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 157 (col. 23): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 158 (col. 53): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 160 (col. 23): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 162 (col. 33): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 163 (col. 33): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: ../main.c
+ 
+Building target: Homework_3_Temperature_Clock.out
+Invoking: MSP430 Linker
+"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/bin/cl430" -vmspx --abi=eabi --data_model=restricted --use_hw_mpy=F5 --advice:power=all -g --define=__MSP430F5529__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --printf_support=minimal -z -m"Homework_3_Temperature_Clock.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"/Applications/ti/ccsv6/ccs_base/msp430/include" -i"/Applications/ti/ccsv6/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/lib" -i"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="Homework_3_Temperature_Clock_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Homework_3_Temperature_Clock.out" "./main.obj" "../lnk_msp430f5529.cmd"  -l"libmath.a" -l"libc.a" 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: Homework_3_Temperature_Clock.out
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Homework_3_Temperature_Clock ****
+
+/Applications/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../main.c
+Invoking: MSP430 Compiler
+"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/bin/cl430" -vmspx --abi=eabi --data_model=restricted --use_hw_mpy=F5 --include_path="/Applications/ti/ccsv6/ccs_base/msp430/include" --include_path="/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/include" --advice:power=all -g --define=__MSP430F5529__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --printf_support=minimal --preproc_with_compile --preproc_dependency="main.pp"  "../main.c"
+"../main.c", line 82: warning #70-D: integer conversion resulted in truncation
+"../main.c", line 126: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 132: remark #1528-D: (ULP 3.1) Detected flag polling using UCRXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 177: warning #994-D: missing return statement at end of non-void function "getTemps"
+"../main.c", line 157: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 160: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 191: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 192: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 196: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 197: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 201: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 202: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 224: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 225: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 226: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 227: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 228: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 229: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 236: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 238: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 238: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 238: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 243: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 245: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 246: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 262: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 243: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 245: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 246: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 262: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 285: remark #2553-D: (ULP 14.1) Array index (involving "index") of type "int". Recommend using "unsigned int"
+"../main.c", line 287: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 288: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 290: remark #2553-D: (ULP 14.1) Array index (involving "index") of type "int". Recommend using "unsigned int"
+"../main.c", line 292: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 293: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 295: remark #2553-D: (ULP 14.1) Array index (involving "index") of type "int". Recommend using "unsigned int"
+"../main.c", line 297: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 298: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 330: warning #121-D: return value type does not match the function type
+"../main.c", line 330: warning #1132-D: returning pointer to local variable
+"../main.c", line 313: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 336: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 336: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 336: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 341: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 343: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 344: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 359: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 341: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 343: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 344: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 359: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 474: remark #1538-D: (ULP 10.1) ISR Timer_A0 calls function getTemps. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 497: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 493: warning #548-D: transfer of control bypasses initialization of:
+            variable "c" (declared at line 499)
+"../main.c", line 507: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 507: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 531: remark #1538-D: (ULP 10.1) ISR Port_2 calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 532: remark #1538-D: (ULP 10.1) ISR Port_2 calls function OUTA_UART. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 533: remark #1538-D: (ULP 10.1) ISR Port_2 calls function OUTA_UART. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 534: remark #1538-D: (ULP 10.1) ISR Port_2 calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 157 (col. 23): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 158 (col. 53): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 160 (col. 23): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 162 (col. 33): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 163 (col. 33): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: ../main.c
+ 
+Building target: Homework_3_Temperature_Clock.out
+Invoking: MSP430 Linker
+"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/bin/cl430" -vmspx --abi=eabi --data_model=restricted --use_hw_mpy=F5 --advice:power=all -g --define=__MSP430F5529__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --printf_support=minimal -z -m"Homework_3_Temperature_Clock.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"/Applications/ti/ccsv6/ccs_base/msp430/include" -i"/Applications/ti/ccsv6/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/lib" -i"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="Homework_3_Temperature_Clock_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Homework_3_Temperature_Clock.out" "./main.obj" "../lnk_msp430f5529.cmd"  -l"libmath.a" -l"libc.a" 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: Homework_3_Temperature_Clock.out
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Homework_3_Temperature_Clock ****
+
+/Applications/ti/ccsv6/utils/bin/gmake -k all 
+Building file: ../main.c
+Invoking: MSP430 Compiler
+"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/bin/cl430" -vmspx --abi=eabi --data_model=restricted --use_hw_mpy=F5 --include_path="/Applications/ti/ccsv6/ccs_base/msp430/include" --include_path="/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/include" --advice:power=all -g --define=__MSP430F5529__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --printf_support=minimal --preproc_with_compile --preproc_dependency="main.pp"  "../main.c"
+"../main.c", line 82: warning #70-D: integer conversion resulted in truncation
+"../main.c", line 126: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 132: remark #1528-D: (ULP 3.1) Detected flag polling using UCRXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 177: warning #994-D: missing return statement at end of non-void function "getTemps"
+"../main.c", line 157: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 160: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 191: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 192: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 196: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 197: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 201: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 202: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 224: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 225: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 226: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 227: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 228: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 229: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 236: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 238: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 238: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 238: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 243: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 245: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 246: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 262: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 243: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 245: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 246: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 262: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 285: remark #2553-D: (ULP 14.1) Array index (involving "index") of type "int". Recommend using "unsigned int"
+"../main.c", line 287: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 288: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 290: remark #2553-D: (ULP 14.1) Array index (involving "index") of type "int". Recommend using "unsigned int"
+"../main.c", line 292: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 293: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 295: remark #2553-D: (ULP 14.1) Array index (involving "index") of type "int". Recommend using "unsigned int"
+"../main.c", line 297: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 298: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 330: warning #121-D: return value type does not match the function type
+"../main.c", line 330: warning #1132-D: returning pointer to local variable
+"../main.c", line 313: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 336: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 336: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 336: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 341: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 343: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 344: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 360: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 341: remark #2553-D: (ULP 14.1) Array index (involving "x") of type "int". Recommend using "unsigned int"
+"../main.c", line 343: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 344: remark #2553-D: (ULP 14.1) Array index (involving "z") of type "int". Recommend using "unsigned int"
+"../main.c", line 360: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../main.c", line 475: remark #1538-D: (ULP 10.1) ISR Timer_A0 calls function getTemps. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 498: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+"../main.c", line 494: warning #548-D: transfer of control bypasses initialization of:
+            variable "c" (declared at line 500)
+"../main.c", line 508: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 508: remark #1538-D: (ULP 10.1) ISR USCI_A1_ISR calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 532: remark #1538-D: (ULP 10.1) ISR Port_2 calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 534: remark #1538-D: (ULP 10.1) ISR Port_2 calls function useCommands. Recommend moving function call away from ISR, or inlining the function, or using pragmas
+"../main.c", line 157 (col. 23): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 158 (col. 53): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 160 (col. 23): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 162 (col. 33): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 163 (col. 33): remark #1531-D: (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: ../main.c
+ 
+Building target: Homework_3_Temperature_Clock.out
+Invoking: MSP430 Linker
+"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/bin/cl430" -vmspx --abi=eabi --data_model=restricted --use_hw_mpy=F5 --advice:power=all -g --define=__MSP430F5529__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --printf_support=minimal -z -m"Homework_3_Temperature_Clock.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"/Applications/ti/ccsv6/ccs_base/msp430/include" -i"/Applications/ti/ccsv6/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/lib" -i"/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/include" --reread_libs --warn_sections --display_error_number --diag_wrap=off --xml_link_info="Homework_3_Temperature_Clock_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "Homework_3_Temperature_Clock.out" "./main.obj" "../lnk_msp430f5529.cmd"  -l"libmath.a" -l"libc.a" 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: Homework_3_Temperature_Clock.out
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Homework_3_Temperature_Clock ****
+
+/Applications/ti/ccsv6/utils/bin/gmake -k all 
+gmake: Nothing to be done for 'all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Homework_3_Temperature_Clock ****
+
+/Applications/ti/ccsv6/utils/bin/gmake -k all 
+gmake: Nothing to be done for 'all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Homework_3_Temperature_Clock ****
+
+/Applications/ti/ccsv6/utils/bin/gmake -k all 
+gmake: Nothing to be done for 'all'.
+
+**** Build Finished ****
