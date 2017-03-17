@@ -480,7 +480,7 @@ __interrupt void Timer_A0 (void)
 	//if(seconds == 5){
 	//	getTemps();
 	//}
-//P1OUT ^= BIT0;
+P1OUT ^= BIT0;
 
 
 }
