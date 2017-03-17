@@ -29,8 +29,11 @@ int getTemps(void);
 void setTime(int h, int m, int s);
 void displayTime();
 void useCommands(char c);
+void addToStringBuffer(char c);
 unsigned char INCHAR_UART(void);
 volatile unsigned int seconds;
+volatile unsigned int stringindex;
+volatile char string[100];
 volatile unsigned int minutes;
 volatile unsigned int multiplesoffive;
 volatile unsigned int hours;
@@ -46,6 +49,7 @@ int main(void){
 	volatile unsigned int i;
 	volatile unsigned int currenttemp;
 		index = 0;
+		stringindex = 0;
 		initializeStruct();
 		WDTCTL = WDTPW + WDTHOLD;
 		init_UART();
@@ -212,6 +216,15 @@ void displayAllTemps(void){
 
 	if(state == 0){
 			// print no recorded temps
+		char* word = "No temperatures recorded.";
+
+		int x = 0;
+		for(x = 0; x < 26; x++){
+			OUTA_UART(*word);
+			word++;
+
+
+		}
 		}
 
 }
@@ -233,8 +246,17 @@ void displayOldest(void){
 
 	}
 	if(state == 0){
-		// print no recorded temps
-	}
+				// print no recorded temps
+			char* word = "No temperatures recorded.";
+
+			int x = 0;
+			for(x = 0; x < 26; x++){
+				OUTA_UART(*word);
+				word++;
+
+
+			}
+			}
 }
 /*void sortStruct(){
 	int x = 0;
@@ -268,6 +290,16 @@ void displayOldest(void){
 
 
 }*/
+
+
+void addToStringBuffer(char c){
+
+	if(stringindex < 63){
+	string[stringindex] = c;
+	stringindex++;
+	}
+
+}
 void useCommands(char c){
 	// tsol
 
@@ -293,11 +325,12 @@ void useCommands(char c){
 	// ideas for temp reading - use a struct
 	else if(c== 'o'){
 		// show oldest temp readings
+		displayOldest();
 
 	}
 	else if(c == 'l'){
 		// show all temp readings
-
+		displayAllTemps();
 	}
 
 }
@@ -350,9 +383,16 @@ __interrupt void USCI_A1_ISR(void)
   case 0:break;                             // Vector 0 - no interrupt
   case 2:                                   // Vector 2 - RXIFG
     while (!(UCA1IFG&UCTXIFG));             // USCI_A0 TX buffer ready?
-    UCA1TXBUF = UCA1RXBUF;                  // TX -> RXed character
+   // UCA1TXBUF = UCA1RXBUF;                  // TX -> RXed character
     char c = UCA1RXBUF;
 
+    if(stringindex < 100){
+        	string[stringindex] = c;
+        	stringindex++;
+        	}
+
+
+    useCommands(c);
 
 
 
