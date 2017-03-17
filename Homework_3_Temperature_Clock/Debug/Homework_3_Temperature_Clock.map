@@ -1,7 +1,7 @@
 ******************************************************************************
                   MSP430 Linker Unix v4.4.6                    
 ******************************************************************************
->> Linked Thu Mar 16 22:52:05 2017
+>> Linked Thu Mar 16 23:20:21 2017
 
 OUTPUT FILE NAME:   <Homework_3_Temperature_Clock.out>
 ENTRY POINT SYMBOL: "_c_int00_noargs_noexit"  address: 00004492
@@ -85,7 +85,7 @@ MEMORY CONFIGURATION
   INT61                 0000fffa   00000002  00000002  00000000  RWIX
   INT62                 0000fffc   00000002  00000002  00000000  RWIX
   RESET                 0000fffe   00000002  00000002  00000000  RWIX
-  FLASH2                00010000   00014400  00000a48  000139b8  RWIX
+  FLASH2                00010000   00014400  00000a58  000139a8  RWIX
 
 
 SECTION ALLOCATION MAP
@@ -206,37 +206,37 @@ SYSNMI     0    0000fffc    00000002
 .reset     0    0000fffe    00000002     
                   0000fffe    00000002     rts430x_lc_rd_eabi.lib : boot.obj (.reset)
 
-.text      0    00010000    00000a48     
+.text      0    00010000    00000a58     
                   00010000    00000130     rts430x_lc_rd_eabi.lib : fs_add.obj (.text)
                   00010130    00000116     main.obj (.text:getTemps)
-                  00010246    000000d0     main.obj (.text:displayOldest)
-                  00010316    000000c0     main.obj (.text:displayAllTemps)
-                  000103d6    000000b6     rts430x_lc_rd_eabi.lib : fs_mpy.obj (.text)
-                  0001048c    000000a0     main.obj (.text:displayStampedTime)
-                  0001052c    0000009e     main.obj (.text:main)
-                  000105ca    0000008e     rts430x_lc_rd_eabi.lib : fs_div.obj (.text)
-                  00010658    0000007e     main.obj (.text:displayTime)
-                  000106d6    00000078     main.obj (.text:useCommands)
-                  0001074e    0000006c     rts430x_lc_rd_eabi.lib : autoinit_wdt.obj (.text:_auto_init_hold_wdt)
-                  000107ba    00000066     main.obj (.text:convertToChar)
-                  00010820    00000058     main.obj (.text:initializeStruct)
-                  00010878    0000004a     rts430x_lc_rd_eabi.lib : fs_ltof.obj (.text)
-                  000108c2    00000046                            : fs_tou.obj (.text)
-                  00010908    0000002c                            : div16s.obj (.text)
-                  00010934    00000024                            : copy_zero_init.obj (.text:decompress:ZI:__TI_zero_init)
-                  00010958    00000024     main.obj (.text:init_UART)
-                  0001097c    00000024     rts430x_lc_rd_eabi.lib : fs_utof.obj (.text)
-                  000109a0    00000022                            : mult32_f5hw.obj (.text)
-                  000109c2    0000001c     main.obj (.text:convertToNum)
-                  000109de    00000016     rts430x_lc_rd_eabi.lib : div16u.obj (.text)
-                  000109f4    00000016                            : mult16_f5hw.obj (.text)
-                  00010a0a    0000000e     main.obj (.text:setTime)
-                  00010a18    0000000c     main.obj (.text:INCHAR_UART)
-                  00010a24    0000000c     main.obj (.text:OUTA_UART)
-                  00010a30    00000008     main.obj (.text:convertBackSingleDigit)
-                  00010a38    00000008     main.obj (.text:convertSingleDigit)
-                  00010a40    00000004     rts430x_lc_rd_eabi.lib : pre_init.obj (.text:_system_pre_init)
-                  00010a44    00000004                            : exit.obj (.text:abort)
+                  00010246    000000d8     main.obj (.text:useCommands)
+                  0001031e    000000b6     rts430x_lc_rd_eabi.lib : fs_mpy.obj (.text)
+                  000103d4    000000b0     main.obj (.text:displayAllTemps)
+                  00010484    000000b0     main.obj (.text:displayOldest)
+                  00010534    0000009e     main.obj (.text:main)
+                  000105d2    00000090     main.obj (.text:displayStampedTime)
+                  00010662    0000008e     rts430x_lc_rd_eabi.lib : fs_div.obj (.text)
+                  000106f0    0000006e     main.obj (.text:displayTime)
+                  0001075e    0000006c     rts430x_lc_rd_eabi.lib : autoinit_wdt.obj (.text:_auto_init_hold_wdt)
+                  000107ca    00000066     main.obj (.text:convertToChar)
+                  00010830    00000058     main.obj (.text:initializeStruct)
+                  00010888    0000004a     rts430x_lc_rd_eabi.lib : fs_ltof.obj (.text)
+                  000108d2    00000046                            : fs_tou.obj (.text)
+                  00010918    0000002c                            : div16s.obj (.text)
+                  00010944    00000024                            : copy_zero_init.obj (.text:decompress:ZI:__TI_zero_init)
+                  00010968    00000024     main.obj (.text:init_UART)
+                  0001098c    00000024     rts430x_lc_rd_eabi.lib : fs_utof.obj (.text)
+                  000109b0    00000022                            : mult32_f5hw.obj (.text)
+                  000109d2    0000001c     main.obj (.text:convertToNum)
+                  000109ee    00000016     rts430x_lc_rd_eabi.lib : div16u.obj (.text)
+                  00010a04    00000016                            : mult16_f5hw.obj (.text)
+                  00010a1a    0000000e     main.obj (.text:setTime)
+                  00010a28    0000000c     main.obj (.text:INCHAR_UART)
+                  00010a34    0000000c     main.obj (.text:OUTA_UART)
+                  00010a40    00000008     main.obj (.text:convertBackSingleDigit)
+                  00010a48    00000008     main.obj (.text:convertSingleDigit)
+                  00010a50    00000004     rts430x_lc_rd_eabi.lib : pre_init.obj (.text:_system_pre_init)
+                  00010a54    00000004                            : exit.obj (.text:abort)
 
 
 LINKER GENERATED COPY TABLES
@@ -338,7 +338,7 @@ address   name
 00000732  ADC12MEM9               
 00000733  ADC12MEM9_H             
 00000732  ADC12MEM9_L             
-00010a44  C$$EXIT                 
+00010a54  C$$EXIT                 
 000008c0  CBCTL0                  
 000008c1  CBCTL0_H                
 000008c0  CBCTL0_L                
@@ -424,7 +424,7 @@ address   name
 00000146  FCTL4                   
 00000147  FCTL4_H                 
 00000146  FCTL4_L                 
-00010a18  INCHAR_UART             
+00010a28  INCHAR_UART             
 000004c4  MAC                     
 000004da  MAC32H                  
 000004db  MAC32H_H                
@@ -473,7 +473,7 @@ address   name
 000004e0  OP2L_L                  
 000004c9  OP2_H                   
 000004c8  OP2_L                   
-00010a24  OUTA_UART               
+00010a34  OUTA_UART               
 0000020e  P1IV                    
 0000021e  P2IV                    
 000001e0  P4MAP01                 
@@ -1042,52 +1042,52 @@ UNDEFED   __TI_INITARRAY_Limit
 0000fff8  __TI_int60              
 0000fffa  __TI_int61              
 0000fffc  __TI_int62              
-00010934  __TI_zero_init          
+00010944  __TI_zero_init          
 ffffffff  __binit__               
 ffffffff  __c_args__              
 00010006  __mspabi_addf           
-000105ca  __mspabi_divf           
-00010908  __mspabi_divi           
-000109de  __mspabi_divu           
-000108c2  __mspabi_fixfu          
-00010878  __mspabi_fltlif         
-0001097c  __mspabi_fltuf          
-000103d6  __mspabi_mpyf           
-000109f4  __mspabi_mpyi_f5hw      
-000109a0  __mspabi_mpyl_f5hw      
-00010908  __mspabi_remi           
-000109de  __mspabi_remu           
+00010662  __mspabi_divf           
+00010918  __mspabi_divi           
+000109ee  __mspabi_divu           
+000108d2  __mspabi_fixfu          
+00010888  __mspabi_fltlif         
+0001098c  __mspabi_fltuf          
+0001031e  __mspabi_mpyf           
+00010a04  __mspabi_mpyi_f5hw      
+000109b0  __mspabi_mpyl_f5hw      
+00010918  __mspabi_remi           
+000109ee  __mspabi_remu           
 00010000  __mspabi_subf           
-0001074e  _auto_init_hold_wdt     
+0001075e  _auto_init_hold_wdt     
 00004492  _c_int00_noargs_noexit  
 0000fffe  _reset_vector           
 00004360  _stack                  
-00010a40  _system_pre_init        
-00010a44  abort                   
+00010a50  _system_pre_init        
+00010a54  abort                   
 00002400  alltemps                
 ffffffff  binit                   
-00010a30  convertBackSingleDigit  
-00010a38  convertSingleDigit      
-000107ba  convertToChar           
-000109c2  convertToNum            
-00010316  displayAllTemps         
-00010246  displayOldest           
-0001048c  displayStampedTime      
-00010658  displayTime             
+00010a40  convertBackSingleDigit  
+00010a48  convertSingleDigit      
+000107ca  convertToChar           
+000109d2  convertToNum            
+000103d4  displayAllTemps         
+00010484  displayOldest           
+000105d2  displayStampedTime      
+000106f0  displayTime             
 00010130  getTemps                
 000025a4  hours                   
 000025a6  index                   
-00010958  init_UART               
-00010820  initializeStruct        
-0001052c  main                    
+00010968  init_UART               
+00010830  initializeStruct        
+00010534  main                    
 000025a8  minutes                 
 000025aa  multiplesoffive         
 000025ac  seconds                 
-00010a0a  setTime                 
+00010a1a  setTime                 
 00002540  string                  
 000025ae  stringindex             
 000025b0  temp                    
-000106d6  useCommands             
+00010246  useCommands             
 
 
 GLOBAL SYMBOLS: SORTED BY Symbol Address 
@@ -1891,37 +1891,37 @@ address   name
 00010000  __mspabi_subf           
 00010006  __mspabi_addf           
 00010130  getTemps                
-00010246  displayOldest           
-00010316  displayAllTemps         
-000103d6  __mspabi_mpyf           
-0001048c  displayStampedTime      
-0001052c  main                    
-000105ca  __mspabi_divf           
-00010658  displayTime             
-000106d6  useCommands             
-0001074e  _auto_init_hold_wdt     
-000107ba  convertToChar           
-00010820  initializeStruct        
-00010878  __mspabi_fltlif         
-000108c2  __mspabi_fixfu          
-00010908  __mspabi_divi           
-00010908  __mspabi_remi           
-00010934  __TI_zero_init          
-00010958  init_UART               
-0001097c  __mspabi_fltuf          
-000109a0  __mspabi_mpyl_f5hw      
-000109c2  convertToNum            
-000109de  __mspabi_divu           
-000109de  __mspabi_remu           
-000109f4  __mspabi_mpyi_f5hw      
-00010a0a  setTime                 
-00010a18  INCHAR_UART             
-00010a24  OUTA_UART               
-00010a30  convertBackSingleDigit  
-00010a38  convertSingleDigit      
-00010a40  _system_pre_init        
-00010a44  C$$EXIT                 
-00010a44  abort                   
+00010246  useCommands             
+0001031e  __mspabi_mpyf           
+000103d4  displayAllTemps         
+00010484  displayOldest           
+00010534  main                    
+000105d2  displayStampedTime      
+00010662  __mspabi_divf           
+000106f0  displayTime             
+0001075e  _auto_init_hold_wdt     
+000107ca  convertToChar           
+00010830  initializeStruct        
+00010888  __mspabi_fltlif         
+000108d2  __mspabi_fixfu          
+00010918  __mspabi_divi           
+00010918  __mspabi_remi           
+00010944  __TI_zero_init          
+00010968  init_UART               
+0001098c  __mspabi_fltuf          
+000109b0  __mspabi_mpyl_f5hw      
+000109d2  convertToNum            
+000109ee  __mspabi_divu           
+000109ee  __mspabi_remu           
+00010a04  __mspabi_mpyi_f5hw      
+00010a1a  setTime                 
+00010a28  INCHAR_UART             
+00010a34  OUTA_UART               
+00010a40  convertBackSingleDigit  
+00010a48  convertSingleDigit      
+00010a50  _system_pre_init        
+00010a54  C$$EXIT                 
+00010a54  abort                   
 ffffffff  __binit__               
 ffffffff  __c_args__              
 ffffffff  binit                   

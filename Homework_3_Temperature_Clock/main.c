@@ -202,8 +202,8 @@ void displayTime(){
 				OUTA_UART(test[z]);
 			}
 
-			OUTA_UART(0x0D);
-			OUTA_UART(0x0A);
+
+
 
 }
 
@@ -265,10 +265,11 @@ void displayAllTemps(void){
 
 
 		}
+
+
 		}
 
-	OUTA_UART(0x0D);
-	OUTA_UART(0x0A);
+
 }
 int convertToNum(char first, char second){
 	// take '1' and '1' and convert to 11
@@ -297,8 +298,8 @@ void displayStampedTime(int index){
 			for(z = 0; z < 2; z++){
 				OUTA_UART(test[z]);
 			}
-			OUTA_UART(0x0D);
-			OUTA_UART(0x0A);
+
+
 
 }
 
@@ -347,8 +348,8 @@ void displayOldest(void){
 
 
 				state = 1;
-				OUTA_UART(0x0D);
-				OUTA_UART(0x0A);
+
+
 				break;
 			}
 	}
@@ -363,8 +364,7 @@ void displayOldest(void){
 
 
 			}
-			OUTA_UART(0x0D);
-			OUTA_UART(0x0A);
+
 			}
 }
 /*void sortStruct(){
@@ -413,7 +413,11 @@ void useCommands(char c){
 	// tsol
 
 	if(c == 't'){
+		OUTA_UART(0x0D);
+		OUTA_UART(0x0A);
 		displayTime();
+		OUTA_UART(0x0D);
+		OUTA_UART(0x0A);
 	}
 	else if(c == 's'){
 		// set time
@@ -433,13 +437,20 @@ void useCommands(char c){
 	// ideas for temp reading - use a struct
 	else if(c== 'o'){
 		// show oldest temp readings
+		OUTA_UART(0x0D);
+		OUTA_UART(0x0A);
 		displayOldest();
-
+		OUTA_UART(0x0D);
+		OUTA_UART(0x0A);
 	}
 
 	else if(c == 'l'){
 		// show all temp readings
+		OUTA_UART(0x0D);
+		OUTA_UART(0x0A);
 		displayAllTemps();
+		OUTA_UART(0x0D);
+		OUTA_UART(0x0A);
 	}
 
 }
