@@ -245,8 +245,7 @@ void displayAllTemps(void){
 						for(z = 0; z < 2; z++){
 							OUTA_UART(test[z]);
 						}
-						OUTA_UART(0x0D);
-						OUTA_UART(0x0A);
+
 
 
 			state = 1;

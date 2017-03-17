@@ -2,22 +2,23 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="add" key="selection"/>
+		<item value="0x0D" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="add"/>
-			<item value="Port"/>
-			<item value="Port_1"/>
-			<item value="Port_1(void)"/>
-			<item value="PORT"/>
-			<item value="USCI A1"/>
-			<item value="UCARXBUF"/>
-			<item value="UART"/>
+			<item value="0x0D"/>
+			<item value="display"/>
+			<item value="0x0A"/>
+			<item value="displayOld"/>
+			<item value="displayAllTemps"/>
+			<item value="&apos;l"/>
+			<item value="no"/>
+			<item value="temper"/>
 		</list>
 		<list key="replacehistory">
+			<item value="convertSingleDigit"/>
 			<item value="1, &quot;"/>
 			<item value=", &quot;1"/>
 			<item value="init"/>
@@ -25,7 +26,6 @@
 			<item value=""/>
 			<item value="listofedges"/>
 			<item value="SynchronizedBuffer.occupied"/>
-			<item value="System.out.println(&quot;Placing &quot; + completeBin.charAt(mastercount) + &quot; at row &quot; + cur_row + &quot; col &quot; + cur_col);&#x0A;"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
