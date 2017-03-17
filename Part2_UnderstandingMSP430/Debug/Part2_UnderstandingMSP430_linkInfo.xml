@@ -2,7 +2,7 @@
 <link_info>
    <banner>MSP430 Linker Unix v4.4.6</banner>
    <copyright>Copyright (c) 2003-2015 Texas Instruments Incorporated</copyright>
-   <link_time>0x58cb0c36</link_time>
+   <link_time>0x58cb49d8</link_time>
    <link_errors>0x5</link_errors>
    <output_file>Part2_UnderstandingMSP430.out</output_file>
    <entry_point>

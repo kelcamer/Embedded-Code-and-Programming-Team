@@ -10,9 +10,9 @@ Invoking: MSP430 Compiler
   START
   __STACK_END
 
->> Compilation failure
-
 Errors in Source - Assembler Aborted
+
+>> Compilation failure
 subdir_rules.mk:7: recipe for target 'lab3.obj' failed
 gmake: *** [lab3.obj] Error 1
 gmake: Target 'all' not remade because of errors.

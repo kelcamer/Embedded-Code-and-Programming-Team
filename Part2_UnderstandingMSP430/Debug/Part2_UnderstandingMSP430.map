@@ -1,7 +1,7 @@
 ******************************************************************************
                   MSP430 Linker Unix v4.4.6                    
 ******************************************************************************
->> Linked Thu Mar 16 18:05:42 2017
+>> Linked Thu Mar 16 22:28:40 2017
 
 OUTPUT FILE NAME:   <Part2_UnderstandingMSP430.out>
 ENTRY POINT SYMBOL: "_c_int00_noargs_noexit"  address: 0000441c

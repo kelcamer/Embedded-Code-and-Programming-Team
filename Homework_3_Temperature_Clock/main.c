@@ -29,9 +29,12 @@ int getTemps(void);
 void setTime(int h, int m, int s);
 void displayTime();
 void useCommands(char c);
+int convertBackSingleDigit(char num);
 void addToStringBuffer(char c);
 unsigned char INCHAR_UART(void);
 char convertSingleDigit(int num);
+int convertToNum(char first, char second);
+char* convertToChar(int num);
 volatile unsigned int seconds;
 volatile unsigned int stringindex;
 volatile char string[100];
@@ -40,6 +43,8 @@ volatile unsigned int multiplesoffive;
 volatile unsigned int hours;
 volatile unsigned int index;
 void initializeStruct();
+void displayStampedTime(int index);
+
 unsigned int temp;
 
 struct temperature alltemps[32];
@@ -54,6 +59,9 @@ int main(void){
 		initializeStruct();
 		WDTCTL = WDTPW + WDTHOLD;
 		init_UART();
+
+
+
 
 
 		REFCTL0 &= ~REFMSTR;                      // Reset REFMSTR to hand over control to
@@ -101,7 +109,7 @@ ADC12CTL0 |= ADC12SC;                   // Sampling and conversion start
 
 __bis_SR_register(LPM3_bits + GIE);     // LPM3 with interrupts enabled
 __no_operation();
-displayTime();
+
 
 
 }
@@ -174,21 +182,39 @@ void setTime(int h, int m, int s){
 
 }
 void displayTime(){
+	// I need a function that takes a number and returns two separate characters....
+	// like 11 = 1 and 1
+	// I currently have all of these numbers
 
+	char* test = convertToChar(hours);
+			int z = 0;
+			for(z = 0; z < 2; z++){
+				OUTA_UART(test[z]);
+			}
+	test = convertToChar(minutes);
+			 z = 0;
+			for(z = 0; z < 2; z++){
+				OUTA_UART(test[z]);
+			}
+	 test = convertToChar(seconds);
+			 z = 0;
+			for(z = 0; z < 2; z++){
+				OUTA_UART(test[z]);
+			}
 
-	OUTA_UART(convertSingleDigit(hours));
-	OUTA_UART(convertSingleDigit(minutes));
-	OUTA_UART(convertSingleDigit(seconds));
-
+			OUTA_UART(0x0D);
+			OUTA_UART(0x0A);
 
 }
 
 char convertSingleDigit(int num){
-	if(num >= 48 && num <= 57){
-		return (char)num+48;
-	}
 
-	return '0';
+		return (char)num+48;
+
+
+}
+int convertBackSingleDigit(char num){
+		return (char)num-48;
 
 }
 void initializeStruct(){
@@ -210,11 +236,17 @@ void displayAllTemps(void){
 	for(x = 0; x < 32; x++){
 		// if there is a valid time, then print it
 		if(!(alltemps[x].hour == 0 && alltemps[x].min == 0 && alltemps[x].sec == 0)){
-			displayTime();
+			displayStampedTime(x);
 			OUTA_UART(':');
-			OUTA_UART(0x0D);
-			OUTA_UART(0x0A);
-			OUTA_UART(convertSingleDigit(alltemps[x].tempInF));
+			OUTA_UART(' ');
+
+			char* test = convertToChar(alltemps[x].tempInF);
+						int z = 0;
+						for(z = 0; z < 2; z++){
+							OUTA_UART(test[z]);
+						}
+
+
 			OUTA_UART(0x0D);
 			OUTA_UART(0x0A);
 
@@ -238,18 +270,81 @@ void displayAllTemps(void){
 		}
 
 }
+int convertToNum(char first, char second){
+	// take '1' and '1' and convert to 11
+	int num1 = convertBackSingleDigit(first);
+	int num2 = convertBackSingleDigit(second);
+
+	return 10*num1 + num2;
+
+}
+
+void displayStampedTime(int index){
+
+
+	char* test = convertToChar(alltemps[index].hour);
+			int z = 0;
+			for(z = 0; z < 2; z++){
+				OUTA_UART(test[z]);
+			}
+	test = convertToChar(alltemps[index].min);
+			 z = 0;
+			for(z = 0; z < 2; z++){
+				OUTA_UART(test[z]);
+			}
+	 test = convertToChar(alltemps[index].sec);
+			 z = 0;
+			for(z = 0; z < 2; z++){
+				OUTA_UART(test[z]);
+			}
+
+
+}
+
+char* convertToChar(int num){
+	// start with 72
+	// return '7' and '2'
+	char mynumber[2];
+	if(num == 0){
+		return "00";
+	}
+	if(num >=10 && num <=99){
+	int digit1 = num / 10;
+	int digit2 = num - (10*digit1);
+
+
+	mynumber[0] = convertSingleDigit(digit1);
+	mynumber[1] = convertSingleDigit(digit2);
+
+
+	}
+	else if(num <10 && num >0){
+
+		mynumber[0] = '0';
+		mynumber[1] = convertSingleDigit(num);
+
+	}
+
+
+	return &mynumber;
+}
 void displayOldest(void){
 	int x = 31;
 	int state = 0;
 	for(x = 31; x >=0; x--){
 		if(!(alltemps[x].hour == 0 && alltemps[x].min == 0 && alltemps[x].sec == 0)){
-				displayTime();
-				OUTA_UART(':');
-				OUTA_UART(0x0D);
-				OUTA_UART(0x0A);
-				OUTA_UART(convertSingleDigit(alltemps[x].tempInF));
-				OUTA_UART(0x0D);
-				OUTA_UART(0x0A);
+						displayStampedTime(x);
+						OUTA_UART(':');
+						OUTA_UART(' ');
+
+						char* test = convertToChar(alltemps[x].tempInF);
+									int z = 0;
+									for(z = 0; z < 2; z++){
+										OUTA_UART(test[z]);
+									}
+
+
+
 				state = 1;
 				break;
 			}
@@ -267,6 +362,8 @@ void displayOldest(void){
 
 			}
 			}
+			OUTA_UART(0x0D);
+			OUTA_UART(0x0A);
 }
 /*void sortStruct(){
 	int x = 0;
@@ -327,9 +424,8 @@ void useCommands(char c){
 		 char s1 = INCHAR_UART();
 		 char s2 = INCHAR_UART();
 
-		 // h1 and h2 represents 11 o clock, so h1 = 1, h2 = 1
-		 // we need to multiply h1 by 10, because base 10.
-		 // 10*h1 + h2 = the number we need.
+		 setTime(convertToNum(h1,h2), convertToNum(m1,m2), convertToNum(s1,s2));
+
 
 	}
 	// ideas for temp reading - use a struct
@@ -377,9 +473,13 @@ __interrupt void Timer_A0 (void)
 
 	}
 
-
+	if(hours == 24){
+		hours = 0;
+	}
 	// comment this out
-
+	if(seconds == 5){
+		getTemps();
+	}
 P1OUT ^= BIT0;
 
 
@@ -426,10 +526,11 @@ P1IFG &= ~BIT1; // P1.1 interrupt flag cleared
 #pragma vector=PORT2_VECTOR
 __interrupt void Port_2(void)
 {
+useCommands('t');
+useCommands('l');
 
 
-
-P2IFG &= ~BIT1; // P1.1 interrupt flag cleared
+P2IFG &= ~BIT1; // P2.1 interrupt flag cleared
 }
 
 #pragma vector=ADC12_VECTOR

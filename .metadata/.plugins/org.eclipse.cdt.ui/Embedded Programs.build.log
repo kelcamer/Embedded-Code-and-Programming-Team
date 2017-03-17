@@ -6,12 +6,12 @@ Building file: ../main.c
 Invoking: ARM Compiler
 "/Applications/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/bin/armcl" -mv4 --code_state=32 --abi=ti_arm9_abi --include_path="/Applications/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.6/include" --include_path="/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/include" --include_path="/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/bin" --include_path="/Applications/ti/ccsv6/ccs_base/msp430/include" --include_path="/Applications/ti/ccsv6/ccs_base/msp430/include_gcc" -g --display_error_number --diag_warning=225 --diag_wrap=off --preproc_with_compile --preproc_dependency="main.pp"  "../main.c"
 "/Applications/ti/ccsv6/ccs_base/msp430/include/msp430.h", line 1802: fatal error #35: #error directive: "Failed to match a default include file"
-1 catastrophic error detected in the compilation of "../main.c".
-Compilation terminated.
 
 >> Compilation failure
+subdir_rules.mk:7: recipe for target 'main.obj' failed
+1 catastrophic error detected in the compilation of "../main.c".
+Compilation terminated.
 gmake: *** [main.obj] Error 1
 gmake: Target 'all' not remade because of errors.
-subdir_rules.mk:7: recipe for target 'main.obj' failed
 
 **** Build Finished ****
