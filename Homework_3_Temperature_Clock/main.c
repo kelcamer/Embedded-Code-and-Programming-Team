@@ -31,6 +31,7 @@ void displayTime();
 void useCommands(char c);
 void addToStringBuffer(char c);
 unsigned char INCHAR_UART(void);
+char convertSingleDigit(int num);
 volatile unsigned int seconds;
 volatile unsigned int stringindex;
 volatile char string[100];
@@ -173,14 +174,23 @@ void setTime(int h, int m, int s){
 
 }
 void displayTime(){
-	OUTA_UART(hours);
-	OUTA_UART(minutes);
-	OUTA_UART(seconds);
+
+
+	OUTA_UART(convertSingleDigit(hours));
+	OUTA_UART(convertSingleDigit(minutes));
+	OUTA_UART(convertSingleDigit(seconds));
 
 
 }
 
+char convertSingleDigit(int num){
+	if(num >= 48 && num <= 57){
+		return (char)num+48;
+	}
 
+	return '0';
+
+}
 void initializeStruct(){
 
 
@@ -204,7 +214,7 @@ void displayAllTemps(void){
 			OUTA_UART(':');
 			OUTA_UART(0x0D);
 			OUTA_UART(0x0A);
-			OUTA_UART(alltemps[x].tempInF);
+			OUTA_UART(convertSingleDigit(alltemps[x].tempInF));
 			OUTA_UART(0x0D);
 			OUTA_UART(0x0A);
 
@@ -237,7 +247,7 @@ void displayOldest(void){
 				OUTA_UART(':');
 				OUTA_UART(0x0D);
 				OUTA_UART(0x0A);
-				OUTA_UART(alltemps[x].tempInF);
+				OUTA_UART(convertSingleDigit(alltemps[x].tempInF));
 				OUTA_UART(0x0D);
 				OUTA_UART(0x0A);
 				state = 1;
@@ -308,7 +318,7 @@ void useCommands(char c){
 	}
 	else if(c == 's'){
 		// set time
-		// remember that when you set the time, you gotta convert the character to an int by subtracting for ascii
+		// remember that when you set the time, you gotta convertSingleDigit the character to an int by subtracting for ascii
 		// idea: take the first number, multiply by 10 (via sll and add) and then add the second # to the first #
 		 char h1 = INCHAR_UART();
 		 char h2 = INCHAR_UART();
