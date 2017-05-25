@@ -11,14 +11,14 @@ error #10056: symbol "__TI_int53" redefined: first defined in "./main.obj"; rede
 error #10056: symbol "Port_1" redefined: first defined in "./main.obj"; redefined in "./template.obj"
 error #10056: symbol "main" redefined: first defined in "./main.obj"; redefined in "./template.obj"
 error #10056: symbol "Timer_A0" redefined: first defined in "./main.obj"; redefined in "./template.obj"
-error #10010: errors encountered during linking; "Part2_UnderstandingMSP430.out" not built
 remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+error #10010: errors encountered during linking; "Part2_UnderstandingMSP430.out" not built
+gmake: *** [Part2_UnderstandingMSP430.out] Error 1
+gmake: Target 'all' not remade because of errors.
 remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
 remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
 
 >> Compilation failure
 makefile:137: recipe for target 'Part2_UnderstandingMSP430.out' failed
-gmake: *** [Part2_UnderstandingMSP430.out] Error 1
-gmake: Target 'all' not remade because of errors.
 
 **** Build Finished ****

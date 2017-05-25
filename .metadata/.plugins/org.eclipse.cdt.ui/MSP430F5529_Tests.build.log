@@ -6,14 +6,14 @@ Building file: ../main.c
 Invoking: MSP430 Compiler
 "/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/bin/cl430" -vmspx --abi=eabi --data_model=restricted --use_hw_mpy=F5 --include_path="/Applications/ti/ccsv6/ccs_base/msp430/include" --include_path="/Applications/ti/ccsv6/tools/compiler/ti-cgt-msp430_4.4.6/include" --advice:power=all -g --define=__MSP430F5529__ --diag_warning=225 --display_error_number --diag_wrap=off --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --printf_support=minimal --preproc_with_compile --preproc_dependency="main.pp"  "../main.c"
 "../main.c", line 43: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+
+>> Compilation failure
 "../main.c", line 53: remark #1528-D: (ULP 3.1) Detected flag polling using UCTXIFG. Recommend using an interrupt combined with enter LPMx and ISR
+subdir_rules.mk:7: recipe for target 'main.obj' failed
 At end of source: error #68: expected a "}"
 "../main.c", line 2: remark #1535-D: (ULP 8.1) variable "i" is used as a constant. Recommend declaring variable as either 'static const' or 'const'
 1 error detected in the compilation of "../main.c".
-
->> Compilation failure
 gmake: *** [main.obj] Error 1
 gmake: Target 'all' not remade because of errors.
-subdir_rules.mk:7: recipe for target 'main.obj' failed
 
 **** Build Finished ****
