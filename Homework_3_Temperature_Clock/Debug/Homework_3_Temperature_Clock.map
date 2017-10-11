@@ -1,7 +1,7 @@
 ******************************************************************************
                   MSP430 Linker Unix v4.4.6                    
 ******************************************************************************
->> Linked Fri Apr  7 11:49:34 2017
+>> Linked Thu Mar 16 23:34:21 2017
 
 OUTPUT FILE NAME:   <Homework_3_Temperature_Clock.out>
 ENTRY POINT SYMBOL: "_c_int00_noargs_noexit"  address: 00004492

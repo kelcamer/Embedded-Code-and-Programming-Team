@@ -470,10 +470,9 @@ __interrupt void Timer_A0 (void)
 
 
 	seconds++;
-	multiplesoffive++;
 	if(seconds == 60){
 		minutes++;
-
+		multiplesoffive++;
 		seconds = 0;
 
 

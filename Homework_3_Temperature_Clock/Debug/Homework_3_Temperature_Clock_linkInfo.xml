@@ -2,7 +2,7 @@
 <link_info>
    <banner>MSP430 Linker Unix v4.4.6</banner>
    <copyright>Copyright (c) 2003-2015 Texas Instruments Incorporated</copyright>
-   <link_time>0x58e7b50e</link_time>
+   <link_time>0x58cb593d</link_time>
    <link_errors>0x0</link_errors>
    <output_file>Homework_3_Temperature_Clock.out</output_file>
    <entry_point>
@@ -312,13 +312,13 @@
          <run_address>0x2540</run_address>
          <size>0x64</size>
       </object_component>
-      <object_component id="oc-173">
+      <object_component id="oc-172">
          <name>.common:minutes</name>
          <uninitialized>true</uninitialized>
          <run_address>0x25a8</run_address>
          <size>0x2</size>
       </object_component>
-      <object_component id="oc-172">
+      <object_component id="oc-173">
          <name>.common:multiplesoffive</name>
          <uninitialized>true</uninitialized>
          <run_address>0x25aa</run_address>
@@ -1009,7 +1009,7 @@
          <size>0x46</size>
          <input_file_ref idref="fl-3b"/>
       </object_component>
-      <object_component id="oc-257">
+      <object_component id="oc-259">
          <name>.debug_info</name>
          <load_address>0x2e6d</load_address>
          <run_address>0x2e6d</run_address>
@@ -1337,7 +1337,7 @@
          <size>0x34</size>
          <input_file_ref idref="fl-3b"/>
       </object_component>
-      <object_component id="oc-25a">
+      <object_component id="oc-257">
          <name>.debug_line</name>
          <load_address>0x90c</load_address>
          <run_address>0x90c</run_address>
@@ -2435,7 +2435,7 @@
          <size>0x25</size>
          <input_file_ref idref="fl-3b"/>
       </object_component>
-      <object_component id="oc-259">
+      <object_component id="oc-25a">
          <name>.debug_pubnames</name>
          <load_address>0x3c1</load_address>
          <run_address>0x3c1</run_address>
@@ -2578,8 +2578,8 @@
             <object_component_ref idref="oc-171"/>
             <object_component_ref idref="oc-16b"/>
             <object_component_ref idref="oc-16e"/>
-            <object_component_ref idref="oc-173"/>
             <object_component_ref idref="oc-172"/>
+            <object_component_ref idref="oc-173"/>
             <object_component_ref idref="oc-174"/>
             <object_component_ref idref="oc-199"/>
             <object_component_ref idref="oc-17c"/>
@@ -3303,7 +3303,7 @@
             <object_component_ref idref="oc-116"/>
             <object_component_ref idref="oc-8e"/>
             <object_component_ref idref="oc-111"/>
-            <object_component_ref idref="oc-257"/>
+            <object_component_ref idref="oc-259"/>
             <object_component_ref idref="oc-25f"/>
             <object_component_ref idref="oc-140"/>
             <object_component_ref idref="oc-1f1"/>
@@ -3358,7 +3358,7 @@
             <object_component_ref idref="oc-17f"/>
             <object_component_ref idref="oc-91"/>
             <object_component_ref idref="oc-114"/>
-            <object_component_ref idref="oc-25a"/>
+            <object_component_ref idref="oc-257"/>
             <object_component_ref idref="oc-262"/>
             <object_component_ref idref="oc-143"/>
             <object_component_ref idref="oc-1f4"/>
@@ -3555,7 +3555,7 @@
             <object_component_ref idref="oc-d1"/>
             <object_component_ref idref="oc-ae"/>
             <object_component_ref idref="oc-90"/>
-            <object_component_ref idref="oc-259"/>
+            <object_component_ref idref="oc-25a"/>
             <object_component_ref idref="oc-261"/>
             <object_component_ref idref="oc-142"/>
             <object_component_ref idref="oc-1f3"/>
